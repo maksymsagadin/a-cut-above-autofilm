@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React, { useState, useEffect } from 'react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
-import { FeaturedPostCard } from '../components';
-import { getFeaturedPosts } from '../services';
+import { FeaturedPostCard } from '../components'
+import { getFeaturedPosts } from '../services'
 
 const responsive = {
   superLargeDesktop: {
@@ -22,44 +22,45 @@ const responsive = {
     breakpoint: { max: 640, min: 0 },
     items: 1,
   },
-};
+}
 
 const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
+  const [featuredPosts, setFeaturedPosts] = useState([])
+  const [dataLoaded, setDataLoaded] = useState(false)
 
   useEffect(() => {
     getFeaturedPosts().then((result) => {
       setFeaturedPosts(result);
       setDataLoaded(true);
-    });
-  }, []);
+    })
+  }, [])
 
   const customLeftArrow = (
-    <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    <div className="absolute left-0 cursor-pointer ">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-gray-200 w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm3 5.753l-6.44 5.247 6.44 5.263-.678.737-7.322-6 7.335-6 .665.753z" />
       </svg>
     </div>
-  );
+  )
 
   const customRightArrow = (
-    <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    <div className="absolute right-0 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-gray-200 w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z" />
       </svg>
     </div>
-  );
+  )
 
   return (
     <div className="mb-8">
+      <h3 className='text-gray-200 px-4 pb-4 text-2xl font-semibold'>Recent Work</h3>
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
 export default FeaturedPosts;
