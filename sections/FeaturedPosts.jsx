@@ -8,15 +8,15 @@ import { getFeaturedPosts } from '../services'
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5,
+    items: 2,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 3,
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 768, min: 640 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
@@ -54,7 +54,7 @@ const FeaturedPosts = () => {
 
   return (
     <div className="mb-8">
-      <h3 className='text-gray-200 px-4 pb-4 text-2xl font-semibold'>Recent Work</h3>
+      <h3 className='text-gray-200 px-4 text-4xl font-semibold'></h3>
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
