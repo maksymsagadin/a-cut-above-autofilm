@@ -54,9 +54,8 @@ const FeaturedPosts = () => {
   )
 
   return (
-    <div className="mb-8">
-      <h3 className='text-gray-200 text-4xl font-semibold'></h3>
-      <Carousel infinite={true} centerMode={true} keyBoardControl={true} autoPlay={true} customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4" >
+    <div className="mb-8 ">
+      <Carousel infinite={true} centerMode={true} keyBoardControl={true} autoPlay={true} autoPlaySpeed={2500} customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4" >
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
