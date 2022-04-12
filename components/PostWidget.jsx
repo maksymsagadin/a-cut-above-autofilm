@@ -18,7 +18,7 @@ const PostWidget = ({ categories, slug }) => {
   }, [slug]);
 
   return (
-    <div className='bg-gray-200 bg-opacity-40 text-gray-200 shadow-lg rounded-lg p-8 mb-8'>
+    <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-8 mb-8'>
       <h3 className='text-xl mb-3 font-semibold border-b-2 pb-3'>
         { slug ? 'Related Posts' : 'Recent Posts' }
       </h3>
@@ -27,9 +27,9 @@ const PostWidget = ({ categories, slug }) => {
           <div className='w-16 flex-none'>
             <img 
               alt={post.title}
-              height='60px'
-              width='60px'
-              className='align-middle rounded-full'
+              height='65px'
+              width='65px'
+              className='align-middle rounded-xl'
               src={post.featuredImage.url}
             />
           </div>
