@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
   
   return (
     <div className='bg-gray-200 bg-opacity-40 text-gray-200 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
-      <div className='relative overflow-hidden shadow-md pb-80 mb-6 '>
+      <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
           src={post.featuredImage.url}
           alt={post.title}
@@ -18,7 +18,7 @@ const PostCard = ({ post }) => {
           {post.title}
         </Link>
       </h1>
-      <div className='block lg:flex text-center items-center justify-center mb-4 w-full '>
+      <div className='block lg:flex text-center items-center justify-center mb-4 w-full'>
         <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
           <img 
             alt={post.author.name}
