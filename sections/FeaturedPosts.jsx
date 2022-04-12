@@ -8,7 +8,7 @@ import { getFeaturedPosts } from '../services'
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 2,
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
@@ -24,6 +24,7 @@ const responsive = {
     slidesToSlide: 1,
   },
 }
+
 
 const FeaturedPosts = () => {
   const [featuredPosts, setFeaturedPosts] = useState([])
@@ -55,7 +56,7 @@ const FeaturedPosts = () => {
   return (
     <div className="mb-8">
       <h3 className='text-gray-200 text-4xl font-semibold'></h3>
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
+      <Carousel infinite={true} centerMode={true} keyBoardControl={true} autoPlay={true} customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4" >
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
