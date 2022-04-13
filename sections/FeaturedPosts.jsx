@@ -8,11 +8,11 @@ import { getFeaturedPosts } from '../services'
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 1,
+    items: 2,
   },
   desktop: {
     breakpoint: { max: 1024, min: 768 },
-    items: 1,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 768, min: 640 },
@@ -55,7 +55,7 @@ const FeaturedPosts = () => {
 
   return (
     <div className="mb-8">
-      <Carousel infinite={true} centerMode={true} keyBoardControl={true} autoPlay={true} autoPlaySpeed={500} customTransition={'transform 1500ms ease-in-out'} transitionDuration={1500} arrows={false} customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4" >
+      <Carousel infinite={true} autoPlay={true} autoPlaySpeed={500} customTransition={'transform 1500ms ease-in-out'} transitionDuration={1500} arrows={false} customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4" >
         {dataLoaded && featuredPosts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
