@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { PostCard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
-import { FeaturedPosts } from '../sections'
+import { About, FeaturedPosts } from '../sections'
 import { HeroSection } from '../sections'
 
 
@@ -14,6 +14,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/star.png" />
       </Head>
       <HeroSection />
+      <About />
       <h2 className='text-4xl text-gray-200 font-bold py-3 px-3'>Recent Work</h2>
       <div className='grid lg:grid-cols-12 lg:gap-8'>
         <div className='lg:col-span-12'>
