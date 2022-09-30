@@ -1,12 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
 
 const HeroSection = () => {
   return (
     <div className='hero-section'>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center h-full'>
         {/* <p className='text-green-200'>Autofilms</p> */}
-        <h1 className='text-5xl sm:text-8xl font-bold text-[#53aff5]'>
+        <h1 className='text-5xl sm:text-8xl font-bold text-yellow-400'>
           A Cut Above
         </h1>
         <h2 className='text-2xl sm:text-6xl font-bold text-[#d7e1f3]'>
