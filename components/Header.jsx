@@ -38,13 +38,14 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-            <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+            <div className='hidden lg:flex fixed flex-col bottom-[5%] left-0'>
                 <ul>
                     <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
                         <a
                         className='flex justify-between items-center w-full  text-gray-300'
                         href='https://www.instagram.com/acutaboveautofilms/'
                         target='_blank'
+                        rel="noreferrer"
                         >
                         Instagram <FaInstagram size={30} />
                         </a>
@@ -52,8 +53,9 @@ const Header = () => {
                     <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
                         <a
                         className='flex justify-between items-center w-full text-gray-300'
-                        href='mailto: abc@example.com'
+                        href='mailto:ACutAboveAutoFilms@gmail.com'
                         target='_blank'
+                        rel="noreferrer"
                         >
                         Email <HiOutlineMail size={30} />
                         </a>
