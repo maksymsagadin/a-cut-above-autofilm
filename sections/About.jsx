@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import workshop from '../public/e46.jpg'
+import img from '../public/spray.jpg'
 
 const About = () => {
   return (
@@ -11,9 +11,9 @@ const About = () => {
               About
             </p>
         </div>
-        <div className='grid sm:grid-cols-2 gap-0 px-2'>
+        <div className='grid sm:grid-cols-2 gap-3 px-2'>
             <div className=''>
-              <Image src={workshop} objectFit={'contain'} className='opacity-75 ' />
+              <Image src={img} objectFit={'contain'} className='opacity-75 ' />
             </div>
             <div className='flex justify-center items-center pr-10'>
               <p className='xs:text-center sm:text-left'>
@@ -21,7 +21,6 @@ const About = () => {
                 <br/>
                 <br/>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
               </p> 
             </div>
           </div>
