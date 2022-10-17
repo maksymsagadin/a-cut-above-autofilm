@@ -16,7 +16,9 @@ const HeroSection = () => {
         </p>
         <div>
           <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
-            View Work
+            <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel="noreferrer" className='text-[#eaf1f9]'>
+              View Work
+            </a>
           </button>
         </div>
       </div>
