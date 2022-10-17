@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { PostCard, Categories, PostWidget } from '../components'
+import { PostCard } from '../components'
 import { getPosts } from '../services'
-import { About, FeaturedPosts } from '../sections'
+import { About } from '../sections'
 import { HeroSection } from '../sections'
 
 
