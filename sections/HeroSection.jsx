@@ -1,10 +1,11 @@
 import React from 'react'
+import { FaInstagram } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const HeroSection = () => {
   return (
     <div className='hero-section'>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center h-full'>
-        {/* <p className='text-green-200'>Autofilms</p> */}
         <h1 className='text-5xl sm:text-8xl font-bold text-yellow-400'>
           A Cut Above
         </h1>
@@ -21,6 +22,30 @@ const HeroSection = () => {
             </a>
           </button>
         </div>
+      </div>
+      <div className='hidden sm:flex absolute flex-col bottom-[5%] left-0'>
+        <ul>
+          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+            <a
+              className='flex justify-between items-center w-full  text-gray-300'
+              href='https://www.instagram.com/acutaboveautofilms/'
+              target='_blank'
+              rel="noreferrer"
+              >
+              Instagram <FaInstagram size={30} />
+            </a>
+          </li>
+          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+            <a
+              className='flex justify-between items-center w-full text-gray-300'
+              href='mailto:ACutAboveAutoFilms@gmail.com'
+              target='_blank'
+              rel="noreferrer"
+              >
+              Email <HiOutlineMail size={30} />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   )
