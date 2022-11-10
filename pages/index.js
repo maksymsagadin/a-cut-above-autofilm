@@ -10,7 +10,7 @@ export default function Home({ posts }) {
       <Head>
         <title>A Cut Above Autofilm</title>
         <meta name="description" content="Paint Protection Film" />
-        <link rel="icon" href="/star.png" />
+        <link rel="icon" href="/knife-color.png" />
       </Head>
       <HeroSection />
       <About />
