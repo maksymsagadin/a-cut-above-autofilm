@@ -4,8 +4,8 @@ import img from '../public/spray.jpg'
 
 const About = () => {
   return (
-    <div name='about' className='w-full h-screen text-gray-300'>
-      <div className='flex flex-col justify-center items-center px-8 h-full'>
+    <div name='about' className='w-full h-full py-8 relative text-gray-300'>
+      <div className='flex flex-col justify-center items-center px-8 '>
         <div className='pb-8 pl-8'>
             <p className='text-4xl font-bold inline border-b-4 border-yellow-600'>
               About
