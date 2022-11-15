@@ -4,13 +4,12 @@ import Link from 'next/link'
 import logo  from '../public/knife-white.png'
 
 const Header = () => {
-
     return (
         <div className='container sticky top-0 z-10 mx-auto'>
             <div className='absolute bg-black bg-opacity-20 top-0 left-0 lg:px-8 px-4 w-full py-4'>
                 <div className='float-left block'>
                     <Link href='/'>
-                        <span className='cursor-pointer  hover: inline-block transition duration-500 transform hover:translate-x-4'>
+                        <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-6'>
                             <Image src={logo} height={64} width={64} />
                         </span>
                     </Link>
