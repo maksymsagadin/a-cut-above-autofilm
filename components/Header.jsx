@@ -5,8 +5,8 @@ import logo  from '../public/knife-white.png'
 
 const Header = () => {
     return (
-        <div className='container top-0 mx-auto'>
-            <div className='absolute bg-black bg-opacity-20 top-0 left-0 lg:px-8 px-4 w-full py-4'>
+        <div className='container top-0'>
+            <div className='absolute bg-black bg-opacity-20 top-0 left-0 sm:px-8 px-4 w-full py-4'>
                 <div className='float-left block'>
                     <Link href='/'>
                         <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
