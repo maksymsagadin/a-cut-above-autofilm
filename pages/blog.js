@@ -6,7 +6,7 @@ import { FeaturedPosts } from '../sections'
 
 export default function Home({ posts }) {
   return (
-    <div className="container px-4 sm:px-8 lg:mb-10 lg:my-28">
+    <div className="px-4 mt-28 sm:px-8 lg:mb-10">
       <FeaturedPosts />
       <div className='grid lg:grid-cols-12 grid-cols-1 lg:gap-8'>
         {/* Left Section */}
