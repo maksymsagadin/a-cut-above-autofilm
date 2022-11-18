@@ -42,7 +42,7 @@ const WorkGallery = ({ posts }) => {
                     </div>
                 ))}
                 </div> 
-                <div className='flex justify-between px-2 absolute w-full bottom-[5%]'>
+                <div className='flex justify-between px-6 absolute w-full bottom-[5%]'>
                     <CgChevronDoubleLeftR className='rounded cursor-pointer text-4xl text-[#d7e1f3]' onClick={() => scroll('left')}/>
                     <CgChevronDoubleRightR className='rounded cursor-pointer text-4xl text-[#d7e1f3]' onClick={() => scroll('right')}/>
                 </div> 
