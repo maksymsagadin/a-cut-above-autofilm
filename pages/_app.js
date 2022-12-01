@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Head>
         <title>A Cut Above Autofilm</title>
-        <meta name="description" content="Paint Protection Film" />
+        <meta name="description" content="Paint Protection Film by those who care!" />
+        <meta property="og:title" content="A Cut Above Autofilm" />
+        <meta property="og:description" content="Paint Protection Film by those who care!" />
         <link rel="icon" href="/knife-color.png" />
       </Head>
       <Component {...pageProps} />
