@@ -36,9 +36,9 @@ const WorkGallery = ({ posts }) => {
             {/* Right Column / Carousel */}
             <div className='h-full relative rounded overflow-hidden mx-auto w-full lg:max-w-[66%] lg:my-20'>
                 <div className='flex no-scrollbar relative overflow-x-scroll' ref={scrollRef}>
-                {posts && [posts[0], posts[1], posts[2], posts[3]].map( (post, index) => (
-                    <div className='' >
-                        <FeaturedImage  key={index} post={post} />
+                {posts && [posts[0], posts[1], posts[2], posts[3], posts[4]].map((post, index) => (
+                    <div key={index}>
+                        <FeaturedImage post={post} />
                     </div>
                 ))}
                 </div> 
