@@ -29,8 +29,8 @@ const WorkGallery = ({ posts }) => {
                     We have an extensive range of stunning, unique design options, the STEK DYNOseries redefines the possibilities of an automotive customization.
                 </p>
                 <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
-                    <Link href='/blog'  className='text-[#eaf1f9]'>
-                        View Our Work
+                    <Link href='/blog'>
+                        <span className='text-[#d7e1f3]'>View Our Work</span>
                     </Link>
                 </button>
             </div>
