@@ -25,7 +25,7 @@ const WorkGallery = ({ posts }) => {
                 <h1 className='text-3xl sm:text-5xl font-bold text-yellow-400'>
                     Protection like no other.
                 </h1>
-                <p className='py-4 max-w-[600px] text-[#eaf1f9]'>
+                <p className='py-4 max-w-[600px]'>
                     We have an extensive range of stunning, unique design options, the STEK DYNOseries redefines the possibilities of an automotive customization.
                 </p>
                 <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
