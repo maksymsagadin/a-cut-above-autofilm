@@ -15,12 +15,13 @@ const About = () => {
             <div className='py-4'>
               <Image src={img} objectFit={'contain'} className='opacity-75 rounded' />
             </div>
-            <div className='flex justify-center items-center'>
-              <p className='text-left'>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <br/>
-                <br/>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div className='flex flex-col justify-center items-center indent-4 text-left'>
+              <p>
+                What started off as a part time job vinyl wrapping at SFG Wraps while I was finishing school, turned into a fine art of heating and stretching vinyl to it's limits, learning the hard way how to take apart cars from the bumpers to the doors to even the small little trim pieces that often break upon removal.
+              </p>
+              <br/>
+              <p>
+                With years of experience working with Vinyl, I decided to take on the next toughest challenge: shaping thick PPF to become the shape of a car. While working with PPF can sometimes feel like it's more difficult, the results always leave me blown away and excited to start the next job!
               </p> 
             </div>
         </div>
