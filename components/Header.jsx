@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import logo  from '../public/knife-white.png'
 
 const Header = () => {
+    const router = useRouter()
     return (
         <div className='container top-0'>
-            <div className='absolute bg-black bg-opacity-20 top-0 left-0 sm:px-8 px-4 w-full py-4'>
+            <div className='absolute top-0 left-0 sm:px-8 px-4 w-full py-4'>
                 <div className='float-left block'>
                     <Link href='/'>
                         <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
@@ -15,16 +17,16 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className='content'>
-                    <Link href='/blog'>
+                    {router.pathname=='/' && <Link href='/blog'>
                         <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Blog
                         </span>
-                    </Link>
-                    <Link href='/'>
+                    </Link>}
+                    {router.pathname == '/blog' && <Link href='/'>
                         <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home
                         </span>
-                    </Link>
+                    </Link>}
                 </div>
             </div>
         </div>
