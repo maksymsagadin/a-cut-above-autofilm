@@ -30,7 +30,7 @@ const WorkGallery = ({ posts }) => {
                 </p>
                 <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
                     <Link href='/blog'>
-                        <span className='text-[#d7e1f3]'>View Our Work</span>
+                        View Our Work
                     </Link>
                 </button>
             </div>
