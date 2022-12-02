@@ -11,7 +11,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>A Cut Above Autofilm</title>
         <meta charSet="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
+        <meta name='keywords' content='Paint Protection Film, PPF, Vinyl'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Paint Protection Film by those who care!" />
         <meta property="og:title" content="A Cut Above Autofilm" />
         <meta property="og:description" content="Paint Protection Film by those who care!" />
