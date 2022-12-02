@@ -33,7 +33,7 @@ export const getPosts = async () => {
         }
     `
     const result = await request(graphqlAPI, query)
-    return result.postsConnection.edges
+    return result.postsConnection.edges.reverse()
 }
 
 export const getPostDetails = async (slug) => {
@@ -86,6 +86,7 @@ export const getRecentPosts = async () => {
         }
     `
     const result = await request(graphqlAPI, query)
+    result.posts.reverse()
     return result.posts
 }
 
@@ -119,6 +120,14 @@ export const getCategories = async () => {
         }
     `
     const result = await request(graphqlAPI, query)
+    // Sorting Categories Alphabetically
+    result.categories.sort(function(a,b) {
+        let nameA = a.name.toLowerCase()
+        let nameB = b.name.toLowerCase()
+        if (nameA < nameB) return -1
+        if (nameA > nameB) return 1
+        return 0
+    })
     return result.categories
 }
 
@@ -203,5 +212,5 @@ export const getFeaturedPosts = async () => {
     `
 
     const result = await request(graphqlAPI, query)
-    return result.posts
+    return result.posts.reverse()
 }
