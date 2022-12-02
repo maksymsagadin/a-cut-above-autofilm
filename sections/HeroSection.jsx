@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
+import { Link as LinkScroll } from 'react-scroll'
 
 const HeroSection = () => {
   return (
@@ -15,11 +16,9 @@ const HeroSection = () => {
         <p className='py-4 max-w-[600px] text-[#eaf1f9]'>
         We have an extensive range of stunning, unique design options, the STEK DYNOseries redefines the possibilities of an automotive customization.
         </p>
-        <div>
-          <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
-            <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel="noreferrer" className='text-[#eaf1f9]'>
-              View Work
-            </a>
+        <div className='flex flex-row'>
+          <button className='border-2 rounded px-6 py-3 my-2 ml-4 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
+            <LinkScroll to='about' offset={-15} smooth='true' className='text-[#eaf1f9]'>Get To Know Us</LinkScroll>
           </button>
         </div>
       </div>
