@@ -4,18 +4,18 @@ import img from '../public/spray.jpg'
 
 const About = () => {
   return (
-    <div id='about' className='w-full h-full py-8 mt-8 relative text-gray-300'>
+    <div id='about' className='w-full h-full py-8 mt-8 relative'>
       <div className='flex flex-col justify-center md:items-center px-8 '>
         <div className='pb-8 px-2'>
             <p className='text-4xl px-2 font-bold border-b-4 border-yellow-600'>
               About
             </p>
         </div>
-        <div className='grid md:grid-cols-2 gap-6 justify-around px-2'>
-            <div className='py-4'>
+        <div className='grid md:grid-cols-2 gap-8 justify-around px-2 mt-4'>
+            <div>
               <Image src={img} objectFit={'contain'} className='opacity-75 rounded' />
             </div>
-            <div className='flex flex-col justify-center items-center indent-4 text-left'>
+            <div className='flex flex-col items-center indent-4 text-left'>
               <p>
                 What started off as a part time job vinyl wrapping at SFG Wraps while I was finishing school, turned into a fine art of heating and stretching vinyl to it's limits, learning the hard way how to take apart cars from the bumpers to the doors to even the small little trim pieces that often break upon removal.
               </p>
