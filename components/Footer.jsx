@@ -23,8 +23,8 @@ const Footer = () => {
             </span>
             <p className='text-xl sm:text-4xl text-yellow-400 font-bold'>A Cut Above</p>
         </div>
-        
-        <p className='text-xl sm:text-xl text-[#d7e1f3]'>318 LINDBERGH AVENUE, LIVERMORE, CALIFORNIA 94551, UNITED STATES</p>
+        <address className='text-xl sm:text-xl text-[#d7e1f3]'>318 Lindbergh Avenue, Livermore, CA</address>
+        <a href='tel:9252649707' className='text-xl sm:text-xl text-[#d7e1f3]'>925-264-9709</a>
     </div>
   )
 }
