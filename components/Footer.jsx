@@ -15,7 +15,7 @@ const Footer = () => {
             target='_blank'
             rel="noreferrer"
             >
-            <FaInstagram size={40} />
+            <FaInstagram size={35} />
         </a>
         <div className='flex flex-row justify-center items-center hover:cursor-pointer' onClick={animateScroll.scrollToTop}>
             <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
