@@ -19,7 +19,7 @@ const Footer = () => {
         </a>
         <div className='flex flex-row justify-center items-center hover:cursor-pointer' onClick={animateScroll.scrollToTop}>
             <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
-                <Image src={logo} height={50} width={50} />
+                <Image src={logo} height={45} width={45} />
             </span>
             <p className='text-xl sm:text-4xl text-yellow-400 font-bold'>A Cut Above</p>
         </div>
