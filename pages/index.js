@@ -1,5 +1,5 @@
 import { getFeaturedPosts } from '../services'
-import { HeroSection, About, WorkGallery } from '../sections'
+import { HeroSection, About, FindUs, WorkGallery } from '../sections'
 
 export default function Home({ featuredposts }) {
   
@@ -7,6 +7,7 @@ export default function Home({ featuredposts }) {
     <div className="container mx-auto lg:mb-10">
       <HeroSection />
       <About />
+      <FindUs />
       <WorkGallery posts={featuredposts} />
     </div>
   )
