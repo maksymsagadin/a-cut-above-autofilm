@@ -22,7 +22,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className='hidden sm:flex absolute flex-col bottom-[5%] left-0'>
+      <div className='flex absolute flex-col bottom-[5%] left-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
             <a
