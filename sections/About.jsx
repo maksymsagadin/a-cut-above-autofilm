@@ -11,7 +11,7 @@ const About = () => {
             About
           </p>
         </div>
-        <div className='grid md:grid-cols-2 gap-8 lg:gap-24 items-center justify-center px-2 md:px-4 lg:px-8 xl:px-16 mt-4'>
+        <div className='grid md:grid-cols-2 gap-8 lg:gap-24 items-center justify-center md:px-4 lg:px-8 xl:px-16 mt-4'>
           <div className='flex justify-center'>
             <Image src={img} optimize objectFit={'contain'} className='rounded' />
           </div>
