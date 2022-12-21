@@ -29,7 +29,7 @@ const WorkGallery = ({ posts }) => {
                     We understand as fellow enthusiasts that you want to make sure your handing your keys to someone you can trust, that's why we recommend you spend some time checking out our work.
                 </p>
                 <Link href='/blog'>
-                    <button className='border-2 rounded px-6 py-3 my-2 flex items-center transition duration-500 hover:bg-[#3378ca] hover:border-[#3378ca]'>
+                    <button className='border-2 rounded px-6 py-3 my-1 transition duration-500 hover:bg-[#3378ca] hover:border-[#3378ca]'>
                         View Our Work
                     </button>
                 </Link>

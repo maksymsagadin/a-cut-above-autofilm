@@ -17,9 +17,11 @@ const HeroSection = () => {
         We have an extensive range of stunning, unique design options, the STEK DYNOseries redefines the possibilities of an automotive customization.
         </p>
         <div className='flex flex-row'>
-          <button className='border-2 rounded bg-[#3378ca] bg-opacity-50 px-6 py-3 my-2 ml-4 flex items-center transition duration-500 hover:bg-opacity-100 hover:border-[#3378ca]'>
-            <LinkScroll to='about' offset={-15} smooth='true'>Get To Know Us</LinkScroll>
-          </button>
+          <LinkScroll to='about' offset={-15} smooth='true'>
+            <button className='border-2 rounded bg-[#3378ca] bg-opacity-50 px-6 py-3 my-1 transition duration-500 hover:bg-opacity-100 hover:border-[#3378ca]'>
+              Get To Know Us
+            </button>
+          </LinkScroll>
         </div>
       </div>
       <div className='flex absolute flex-col bottom-[5%] left-0'>
