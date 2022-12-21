@@ -16,7 +16,7 @@ const WorkGallery = ({ posts }) => {
     }
 
     return (
-        <div className='relative overflow-hidden flex flex-col gap-8 lg:flex-row py-8 px-8'>
+        <div className='relative overflow-hidden flex flex-col gap-8 lg:flex-row py-8 px-8 lg:pr-0'>
             {/* Left Column */}
             <div className='flex flex-col items-start justify-center w-full lg:max-w-[33%]'>
                 <h2 className='text-2xl sm:text-4xl font-bold text-[#d7e1f3]'>
@@ -25,7 +25,7 @@ const WorkGallery = ({ posts }) => {
                 <h1 className='text-3xl sm:text-5xl font-bold text-yellow-400'>
                     Protection like no other.
                 </h1>
-                <p className='py-4 max-w-[600px] text-justify'>
+                <p className='py-4 max-w-[600px] md:text-lg text-justify'>
                     We understand as fellow enthusiasts that you want to make sure your handing your keys to someone you can trust, that's why we recommend you spend some time checking out our work.
                 </p>
                 <Link href='/blog'>
