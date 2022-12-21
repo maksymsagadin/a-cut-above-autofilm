@@ -28,11 +28,11 @@ const WorkGallery = ({ posts }) => {
                 <p className='py-4 max-w-[600px] text-justify'>
                     We understand as fellow enthusiasts that you want to make sure your handing your keys to someone you can trust, that's why we recommend you spend some time checking out our work.
                 </p>
-                <button className='border-2 rounded px-6 py-3 my-2 flex items-center hover:bg-[#3378ca] hover:border-[#3378ca]'>
-                    <Link href='/blog'>
+                <Link href='/blog'>
+                    <button className='border-2 rounded px-6 py-3 my-2 flex items-center transition duration-500 hover:bg-[#3378ca] hover:border-[#3378ca]'>
                         View Our Work
-                    </Link>
-                </button>
+                    </button>
+                </Link>
             </div>
             {/* Right Column / Carousel */}
             <div className='h-full relative rounded overflow-hidden mx-auto w-full lg:max-w-[66%] lg:my-16'>
