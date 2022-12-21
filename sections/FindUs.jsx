@@ -19,7 +19,7 @@ const FindUs = () => {
                     <div className='flex justify-center'>
                         <Image src={img} optimize objectFit={'contain'} className='rounded' />
                     </div>
-                    <div className='flex flex-col relative justify-around md:-order-1 lg:text-2xl'>
+                    <div className='flex flex-col relative justify-around md:-order-1 sm:text-lg lg:text-2xl'>
                         <p className='mb-8'>
                             Reach out with any questions you may have, we look forward to working with you! 
                         </p>
