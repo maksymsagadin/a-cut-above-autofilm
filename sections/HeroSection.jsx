@@ -26,7 +26,7 @@ const HeroSection = () => {
       </div>
       <div className='flex absolute flex-col bottom-[5%] left-0'>
         <ul>
-          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full'
               href='https://www.instagram.com/acutaboveautofilms/'
@@ -36,7 +36,7 @@ const HeroSection = () => {
               Instagram <FaInstagram size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full'
               href='mailto:ACutAboveAutoFilms@gmail.com'
