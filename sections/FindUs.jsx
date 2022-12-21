@@ -27,9 +27,9 @@ const FindUs = () => {
                             <a href='tel:9252649707' className='flex items-center tracking-widest py-2'><HiOutlinePhone size={30}/>&nbsp;: 925-264-9709</a>
                             <a href='mailto:ACutAboveAutoFilms@gmail.com'  target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center py-2'><HiOutlineMail size={30}/>&nbsp;: ACutAboveAutoFilms@gmail.com</a>
                             <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center tracking-wider py-2'><FaInstagram size={30}/>&nbsp;: @ACutAboveAutoFilms</a>
-                            <div className='flex whitespace-nowrap'>
+                            <div className='flex tracking-wider py-2'>
                                 <HiOutlineOfficeBuilding size={30}/>&nbsp;: Modified Motorsports, LLC.<br />
-                                318 Lindbergh Ave, Livermore, CA<br />
+                                &nbsp;318 Lindbergh Ave, Livermore, CA<br />
                             </div>
                         </address>
                     </div>
