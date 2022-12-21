@@ -24,11 +24,11 @@ const FindUs = () => {
                             Reach out with any questions you may have, we look forward to working with you! 
                         </p>
                         <address className='text-left text-base md:text-lg lg:text-xl text-[#d7e1f3]'>
-                            <a href='tel:9252649707' className='flex items-center tracking-widest py-2'><HiOutlinePhone size={30}/> : 925-264-9709</a>
-                            <a href='mailto:ACutAboveAutoFilms@gmail.com'  target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center py-2'><HiOutlineMail size={30}/> : ACutAboveAutoFilms@gmail.com</a>
-                            <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center tracking-widest py-2'><FaInstagram size={30}/> : @ACutAboveAutoFilms</a>
+                            <a href='tel:9252649707' className='flex items-center tracking-widest py-2'><HiOutlinePhone size={30}/>&nbsp;: 925-264-9709</a>
+                            <a href='mailto:ACutAboveAutoFilms@gmail.com'  target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center py-2'><HiOutlineMail size={30}/>&nbsp;: ACutAboveAutoFilms@gmail.com</a>
+                            <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel='noreferrer' className='flex whitespace-nowrap items-center tracking-wider py-2'><FaInstagram size={30}/>&nbsp;: @ACutAboveAutoFilms</a>
                             <div className='flex whitespace-nowrap'>
-                                <HiOutlineOfficeBuilding size={30}/>: Modified Motorsports, LLC.<br />
+                                <HiOutlineOfficeBuilding size={30}/>&nbsp;: Modified Motorsports, LLC.<br />
                                 318 Lindbergh Ave, Livermore, CA<br />
                             </div>
                         </address>
