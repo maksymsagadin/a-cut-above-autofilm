@@ -17,12 +17,12 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className='content'>
-                    {router.pathname=='/' && <Link href='/blog'>
+                    {router.pathname == '/' && <Link href='/blog'>
                         <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Blog
                         </span>
                     </Link>}
-                    {router.pathname == '/blog' && <Link href='/'>
+                    {router.pathname != '/' && <Link href='/'>
                         <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home
                         </span>
