@@ -13,7 +13,7 @@ const About = () => {
         </div>
         <div className='grid md:grid-cols-2 gap-8 lg:gap-24 items-center justify-center md:px-4 lg:px-8 xl:px-16 mt-4'>
           <div className='flex justify-center'>
-            <Image src={img} optimize objectFit={'contain'} className='rounded' />
+            <Image src={img} optimize objectFit={'contain'} className='rounded-lg' />
           </div>
           <div className='flex flex-col items-center indent-4 text-justify text-lg lg:text-2xl'>
             <p>
