@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Link as LinkScroll } from 'react-scroll'
 import logo  from '../public/knife-white.png'
 
 const Header = () => {
@@ -17,13 +18,32 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className='content'>
-                    {router.pathname == '/' && <Link href='/blog'>
-                        <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                    {router.pathname == '/' && 
+                    <Link href='/blog'>
+                        <span className='float-right sm:text-2xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Blog
                         </span>
-                    </Link>}
+                    </Link> }
+                    {router.pathname == '/' && 
+                    <LinkScroll to='findus' offset={-15} smooth='true'>
+                        <span className='float-right sm:text-2xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                            Find Us
+                        </span>
+                    </LinkScroll>}
+                    {router.pathname == '/' && 
+                    <LinkScroll to='services' offset={-15} smooth='true'>
+                        <span className='float-right sm:text-2xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                            Services
+                        </span>
+                    </LinkScroll>}
+                    {router.pathname == '/' && 
+                    <LinkScroll to='about' offset={-15} smooth='true'>
+                        <span className='float-right sm:text-2xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                            About
+                        </span>
+                    </LinkScroll>}
                     {router.pathname != '/' && <Link href='/'>
-                        <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right sm:text-2xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home
                         </span>
                     </Link>}
@@ -34,3 +54,9 @@ const Header = () => {
 }
 
 export default Header
+
+// <LinkScroll to='about' offset={-15} smooth='true'>
+                    //     <span className='float-right text-3xl p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                    //         About
+                    //     </span>
+                    // </LinkScroll>
