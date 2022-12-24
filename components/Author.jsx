@@ -10,12 +10,12 @@ const Author = ({ author }) => {
                 unoptimized
                 height= '100px'
                 width='100px'
-                className='align-middle rounded-full'
+                className='rounded-full'
                 src={ author.photo.url }
             />
         </div>
-       <h3 className='text-gray-200 my-4 text-xl font-bold'>{author.name}</h3>
-       <p className='text-gray-200 text-lg'>{author.bio}</p>
+       <h3 className='text-gray-200 my-4 text-xl md:text-2xl font-bold'>{author.name}</h3>
+       <p className='text-gray-200 text-lg md:text-xl'>{author.bio}</p>
     </div>
   )
 }
