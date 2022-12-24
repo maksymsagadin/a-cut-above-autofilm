@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services = () => {
     return (
-        <div id='services' className='w-full h-full py-8 mt-8 relative'>
+        <div id='services' className='w-full h-full my-4 md:my-8 relative'>
             <div className='flex flex-col justify-center text-right px-8'>
                 <div className='pb-8 px-2'>
                     <p className='text-4xl px-2 font-bold border-b-4 border-yellow-400'>
@@ -10,7 +10,7 @@ const Services = () => {
                     </p>
                 </div>
                 {/* Center Text */}
-                <div className='flex justify-center text-lg lg:text-2xl text-center mx-8 my-8 lg:mx-48 lg:my-16 '>
+                <div className='flex justify-center text-lg lg:text-2xl text-center md:w-2/3 mx-auto my-4 md:my-8 lg:my-16 '>
                     We offer many types of automotive film wrapping services, from full color changes to custom applications wrapping for a unique style that matches everyone's taste.
                 </div>
                 <div className='grid md:grid-cols-3 gap-8 lg:gap-16  md:px-4 lg:px-8 xl:px-16 mt-4 text-center'>
