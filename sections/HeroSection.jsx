@@ -18,7 +18,7 @@ const HeroSection = () => {
         </p>
         <div className='flex flex-row'>
           <LinkScroll to='about' offset={-15} smooth='true'>
-            <button className='border-2 rounded bg-[#3378ca] bg-opacity-50 px-6 py-3 my-1 transition duration-500 hover:bg-opacity-100 hover:border-[#3378ca]'>
+            <button className='border-2 rounded-lg bg-[#3378ca] bg-opacity-50 px-6 py-3 my-1 transition duration-500 hover:bg-opacity-100 hover:border-[#3378ca]'>
               Get To Know Us
             </button>
           </LinkScroll>
@@ -26,7 +26,7 @@ const HeroSection = () => {
       </div>
       <div className='flex absolute flex-col bottom-[5%] left-0'>
         <ul>
-          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#333333]'>
+          <li className='w-[160px] h-[60px] rounded-lg flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#333333]'>
             <a
               className='flex justify-between items-center w-full'
               href='https://www.instagram.com/acutaboveautofilms/'
@@ -36,7 +36,7 @@ const HeroSection = () => {
               Instagram <FaInstagram size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#6fc2b0]'>
+          <li className='w-[160px] h-[60px] rounded-lg flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#6fc2b0]'>
             <a
               className='flex justify-between items-center w-full'
               href='mailto:ACutAboveAutoFilms@gmail.com'
