@@ -4,7 +4,7 @@ import img from '../public/spray.jpg'
 
 const About = () => {
   return (
-    <div id='about' className='w-full h-full my-10 relative'>
+    <div id='about' className='w-full h-full my-10 lg:my-16 relative'>
       <div className='flex flex-col justify-center px-8'>
         <div className='pb-8 px-2'>
           <p className='text-4xl px-2 font-bold border-b-4 border-yellow-400'>
