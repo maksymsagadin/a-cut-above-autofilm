@@ -10,16 +10,16 @@ const Services = () => {
                     </p>
                 </div>
                 {/* Center Text */}
-                <div className='flex justify-center text-lg lg:text-2xl indent-4 text-justify md:text-center md:w-2/3 mx-auto my-4 md:my-8 lg:my-16 '>
+                <div className='flex justify-center text-lg lg:text-2xl indent-4 text-justify md:text-center md:w-2/3 mx-auto my-4 md:my-8 lg:my-12 '>
                     We offer many types of automotive film wrapping services, from full color changes to custom applications wrapping for a unique style that matches everyone's taste.
                 </div>
-                <div className='grid md:grid-cols-3 gap-8 lg:gap-16  md:px-4 lg:px-8 xl:px-16 mt-4 text-center'>
+                <div className='grid md:grid-cols-3 gap-8 lg:gap-10  md:px-4 lg:px-8 xl:px-16 mt-4 text-center'>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
                         <p className='mb-2 font-bold'>
-                            Color Change
+                            Vinyl
                         </p>
                         <p className='text-base'>
-                            This can be as simple as using a colored PPF or as complex as removing body panels to vinyl wrap the door jambs for a complete color change.
+                            Traditional vinyl wraps offer hundreds of color options and can cover almost any surface. This includes full vehicle color changes, roof wraps, chrome deletes and more.
                         </p>
                     </div>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
@@ -36,6 +36,30 @@ const Services = () => {
                         </p>
                         <p className='text-base'>
                             If you have a particular design in mind that you want to come alive or simply are tired of looking at a certain trim piece and want to upgrade it.
+                        </p>
+                    </div>
+                    <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
+                        <p className='mb-2 font-bold'>
+                            Ceramic
+                        </p>
+                        <p className='text-base'>
+                            Ceramic coating is a hydrophobic layer if protection added to a painted or PPF'd surface that makes upkeep simple by repelling water and debris, this coating makes washing your car less time consuming. 
+                        </p>
+                    </div>
+                    <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
+                        <p className='mb-2 font-bold'>
+                            Tint
+                        </p>
+                        <p className='text-base'>
+                            This can be as simple as using a colored PPF or as complex as removing body panels to vinyl wrap the door jambs for a complete color change.
+                        </p>
+                    </div>
+                    <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
+                        <p className='mb-2 font-bold'>
+                            Color Change
+                        </p>
+                        <p className='text-base'>
+                            This can be as simple as using a colored PPF or as complex as removing body panels to vinyl wrap the door jambs for a complete color change.
                         </p>
                     </div>
                 </div>
