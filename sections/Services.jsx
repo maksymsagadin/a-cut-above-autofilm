@@ -32,18 +32,18 @@ const Services = () => {
                     </div>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
                         <p className='mb-2 font-bold'>
-                            Custom Wraps
+                            Ceramic Coating
                         </p>
                         <p className='text-base'>
-                            If you have a particular design in mind that you want to come alive or simply are tired of looking at a certain trim piece and want to upgrade it.
+                            Ceramic coating is a hydrophobic layer of protection added to a painted or PPF'd surface that makes upkeep simple by repelling water and debris, this coating makes washing your car less time consuming. 
                         </p>
                     </div>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
                         <p className='mb-2 font-bold'>
-                            Ceramic
+                            Custom Wraps
                         </p>
                         <p className='text-base'>
-                            Ceramic coating is a hydrophobic layer if protection added to a painted or PPF'd surface that makes upkeep simple by repelling water and debris, this coating makes washing your car less time consuming. 
+                            If you have a particular design in mind that you want to come alive or simply are tired of looking at a certain trim piece and want to upgrade it.
                         </p>
                     </div>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
@@ -55,12 +55,14 @@ const Services = () => {
                         </p>
                     </div>
                     <div className='sm:text-lg lg:text-2xl border-2 p-4 rounded-lg'>
-                        <p className='mb-2 font-bold'>
-                            Color Change
-                        </p>
-                        <p className='text-base'>
-                            This can be as simple as using a colored PPF or as complex as removing body panels to vinyl wrap the door jambs for a complete color change.
-                        </p>
+                        <a href='https://modifiedmoto.com/' target='_blank' rel='noopener'>
+                            <p className='mb-2 font-bold'>
+                                Everything Else
+                            </p>
+                            <p className='text-base'>
+                                Working with Modified Motorsports, we are able to offer nearly all aftermarket bolt-on parts along with installation in-house.
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
