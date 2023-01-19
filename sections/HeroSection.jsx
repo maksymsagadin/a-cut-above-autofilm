@@ -31,7 +31,7 @@ const HeroSection = () => {
               className='flex justify-between items-center w-full'
               href='https://www.instagram.com/acutaboveautofilms/'
               target='_blank'
-              rel="noreferrer"
+              rel='noopener noreferrer'
               >
               Instagram <FaInstagram size={30} />
             </a>
@@ -41,7 +41,7 @@ const HeroSection = () => {
               className='flex justify-between items-center w-full'
               href='mailto:ACutAboveAutoFilms@gmail.com'
               target='_blank'
-              rel="noreferrer"
+              rel='noopener noreferrer'
               >
               Email <HiOutlineMail size={30} />
             </a>
