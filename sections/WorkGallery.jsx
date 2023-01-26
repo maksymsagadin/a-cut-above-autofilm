@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CgChevronDoubleLeftR, CgChevronDoubleRightR } from 'react-icons/cg'
 import { FeaturedImage } from '../components'
 
-const WorkGallery = ({ posts }) => {
+const WorkGallery = ({ featuredPosts, heading, subheading, description }) => {
     const scrollRef = React.useRef(null)
     const scroll = (direction) => {
         const { current } = scrollRef;
@@ -20,13 +20,13 @@ const WorkGallery = ({ posts }) => {
             {/* Left Column */}
             <div className='flex flex-col items-start justify-center w-full lg:max-w-[33%]'>
                 <h2 className='text-2xl md:text-4xl font-bold text-[#d7e1f3]'>
-                    A Cut Above.
+                    {heading}
                 </h2>
                 <h1 className='text-2xl md:text-5xl font-bold text-yellow-400'>
-                    Protection like no other.
+                    {subheading}
                 </h1>
                 <p className='py-4 max-w-[600px] md:text-lg text-justify'>
-                    We understand as fellow enthusiasts that you want to make sure your handing your keys to someone you can trust, that's why we recommend you spend some time checking out our work.
+                    {description}
                 </p>
                 <Link href='/blog'>
                     <button className='border-2 rounded-lg px-6 py-3 my-1 transition duration-500 hover:bg-[#3378ca] hover:border-[#3378ca]'>
@@ -37,7 +37,7 @@ const WorkGallery = ({ posts }) => {
             {/* Right Column / Carousel */}
             <div className='h-full relative rounded-lg overflow-hidden mx-auto w-full lg:rounded-r-none lg:max-w-[66%] lg:my-16'>
                 <div className='flex no-scrollbar relative overflow-x-scroll rounded-lg' ref={scrollRef}>
-                {posts && [posts[0], posts[1], posts[2], posts[3], posts[4]].map((post, index) => (
+                {featuredPosts && [featuredPosts[0], featuredPosts[1], featuredPosts[2], featuredPosts[3], featuredPosts[4]].map((post, index) => (
                     <div key={index}>
                         <FeaturedImage post={post} />
                     </div>
