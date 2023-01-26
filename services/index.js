@@ -2,6 +2,53 @@ import { request, gql } from 'graphql-request'
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 
+export const getMain = async () => {
+    const query = gql`
+        query Main {
+            posts(where: {featuredPost: true}) {
+                author {
+                    name
+                    photo {
+                    url
+                    }
+                }
+                slug
+                title
+                createdAt
+                featuredImage {
+                    url
+                }
+            }
+            contact(where: {id: "cldc9qxf7902k0blsvlhk6hlm"}) {
+                phone
+                instagram
+                address
+                email
+            }
+            data(where: {active: true}) {
+                heroHeading
+                heroSubheading
+                heroGreeting
+                authorInfo
+                authorPhoto {
+                  url
+                }
+                servicesDescription
+                findUsGreeting
+                findUsBannerImage {
+                  url
+                }
+                featuredWorkHeading
+                featuredWorkSubheading
+                featuredWorkDescription
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query)
+    return result
+}
+
 export const getPosts = async () => {
     const query = gql`
         query MyQuery {
