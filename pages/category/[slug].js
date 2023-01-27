@@ -2,9 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/router'
 
 import { getCategories, getCategoryPost } from '../../services'
-import { PostCard, Categories, Loader } from '../../components'
+import { Header,Footer, PostCard, Categories, Loader } from '../../components'
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts, contact }) => {
     const router = useRouter()
 
     if (router.isFallback) {
@@ -12,10 +12,11 @@ const CategoryPost = ({ posts }) => {
     }
     return (
     <div className="mx-auto px-10 mt-28 mb-8">
+      <Header logoURL={contact.logo.url} />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
+            <PostCard key={index} post={post} />
           ))}
         </div>
         <div className="col-span-1 lg:col-span-4">
@@ -24,6 +25,7 @@ const CategoryPost = ({ posts }) => {
           </div>
         </div>
       </div>
+      <Footer contact={contact} />
     </div>
   )
 }
@@ -32,10 +34,9 @@ export default CategoryPost
   
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-    const posts = await getCategoryPost(params.slug)
-  
+    const results = await getCategoryPost(params.slug)
     return {
-        props: { posts },
+        props: { posts: results.posts, contact: results.contact  },
     }
 }
 
