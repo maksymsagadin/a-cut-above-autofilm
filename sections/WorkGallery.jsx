@@ -27,7 +27,7 @@ const WorkGallery = ({ data }) => {
                     <h1 className='text-2xl md:text-5xl font-bold text-yellow-400'>
                         {subheading}
                     </h1>
-                    <p className='py-4 max-w-[600px] md:text-lg text-justify'>
+                    <p className='py-4 max-w-[600px] md:text-lg text-justify indent-4'>
                         {description}
                     </p>
                     <Link href='/blog'>

@@ -14,7 +14,7 @@ const HeroSection = ({ data }) => {
         <h2 className='text-2xl sm:text-6xl font-bold text-[#d7e1f3]'>
           {subheading}
         </h2>
-        <p className='py-4 max-w-[600px]'>
+        <p className='py-4 max-w-[600px] indent-4'>
           {greeting}
         </p>
         <div className='flex flex-row'>
