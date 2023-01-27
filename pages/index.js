@@ -33,6 +33,7 @@ export async function getStaticProps() {
       },
       servicesData: {
         greeting: mainData.data.servicesGreeting,
+        services: mainData.services,
       },
       findData: {
         contact: mainData.contact,
