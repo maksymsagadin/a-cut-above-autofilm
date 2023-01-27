@@ -30,21 +30,25 @@ export const getMain = async () => {
                 }
             }
             data(where: {active: true}) {
-                heroHeading
-                heroSubheading
-                heroGreeting
-                aboutInfo
                 aboutPhoto {
                   url
                 }
-                servicesGreeting
                 findUsGreeting
                 findUsBannerImage {
                   url
                 }
+                aboutInfo
+                heroHeading
+                heroSubheading
+                heroGreeting
                 featuredWorkHeading
                 featuredWorkSubheading
                 featuredWorkDescription
+                servicesGreeting
+            }
+            services {
+                serviceTitle
+                serviceDescription
             }
         }
     `
