@@ -2,16 +2,16 @@ import { getFeaturedPosts, getMain } from '../services'
 import { HeroSection, About, Services, FindUs, WorkGallery } from '../sections'
 import { Header, Footer } from '../components'
 
-export default function Home({ contact, heroData, aboutData, servicesData, findData, workData }) {
+export default function Home({ contactData, heroData, aboutData, servicesData, findData, workData }) {
   return (
     <div className="container mx-auto lg:mb-10">
-      <Header logoURL={contact.logo.url} />
+      <Header logoURL={contactData.logo.url} />
       <HeroSection data={heroData} />
       <About data={aboutData} />
       <Services data={servicesData} />
       <FindUs data={findData} />
       <WorkGallery data={workData} />
-      <Footer contact={contact} />
+      <Footer contact={contactData} />
     </div>
   )
 }
@@ -20,7 +20,7 @@ export async function getStaticProps() {
   const mainData = await getMain() || {}
   return {
     props: {
-      contact: mainData.contact,
+      contactData: mainData.contact,
       heroData: {
         heading: mainData.data.heroHeading,
         subheading: mainData.data.heroSubheading,
