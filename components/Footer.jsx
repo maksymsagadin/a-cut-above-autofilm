@@ -6,7 +6,7 @@ import logo  from '../public/knife-white.png'
 
 const Footer = ({ contact }) => {
   return (
-    <div className='flex flex-col justify-center items-center gap-4 m-8'>
+    <footer className='flex flex-col justify-center items-center gap-4 m-8'>
         <a  
             className=''
             href={`https://www.instagram.com/${contact.instagram}/`}
@@ -23,7 +23,7 @@ const Footer = ({ contact }) => {
         </div>
         <address className='text-lg sm:text-xl text-[#d7e1f3]'>{contact.address}</address>
         <a href={`tel:+1-${contact.phone}`} className='text-xl sm:text-xl text-[#d7e1f3]'>{contact.phone}</a>
-    </div>
+    </footer>
   )
 }
 

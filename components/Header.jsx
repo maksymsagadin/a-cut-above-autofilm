@@ -8,12 +8,12 @@ import logo  from '../public/knife-white.png'
 const Header = ({ logoURL }) => {
     const router = useRouter()
     return (
-        <div className='container top-0'>
+        <nav className='container top-0'>
             <div className='absolute top-0 left-0 md:px-8 px-4 w-full py-4'>
                 <div className='float-left'>
                     <Link href='/'>
                         <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
-                            <Image src={logoURL} height={64} width={64} />
+                            <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} />
                         </span>
                     </Link>
                 </div>
@@ -43,7 +43,7 @@ const Header = ({ logoURL }) => {
                     </Link>}
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 
