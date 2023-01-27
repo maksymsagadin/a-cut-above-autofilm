@@ -232,35 +232,41 @@ export const getCategories = async () => {
 export const getCategoryPost = async (slug) => {
     const query = gql`
         query GetCategoryPost ($slug: String!) {
-            postsConnection (where: {categories_some: {slug: $slug}}) {
-                edges {
-                    node {
-                        createdAt
-                        slug
-                        title
-                        description
-                        featuredImage {
-                            url
-                        }
-                        categories {
-                            name
-                            slug
-                        }
-                        author {
-                            bio
-                            id
-                            name
-                            photo {
-                                url
-                            }
-                        }
+            contact(where: {acitve: true}) {
+                address
+                instagram
+                phone
+                email
+                companyName
+                logo {
+                    url
+                }
+            }
+            posts(where: {categories_some: {slug: $slug}}) {
+                createdAt
+                slug
+                title
+                description
+                featuredImage {
+                    url
+                }
+                categories {
+                    name
+                    slug
+                }
+                author {
+                    bio
+                    id
+                    name
+                    photo {
+                        url
                     }
                 }
             }
         }
     `
     const result = await request(graphqlAPI, query, { slug })
-    return result.postsConnection.edges
+    return result
 }
 
 export const submitComment = async (obj) => {
