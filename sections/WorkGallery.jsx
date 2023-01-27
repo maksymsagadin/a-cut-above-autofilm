@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { CgChevronDoubleLeftR, CgChevronDoubleRightR } from 'react-icons/cg'
 import { FeaturedImage } from '../components'
 
-const WorkGallery = ({ featuredPosts, heading, subheading, description }) => {
+const WorkGallery = ({ data }) => {
+    const { featuredPosts, heading, subheading, description } = data
     const scrollRef = React.useRef(null)
     const scroll = (direction) => {
         const { current } = scrollRef;

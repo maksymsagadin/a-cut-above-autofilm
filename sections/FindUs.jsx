@@ -6,7 +6,8 @@ import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
 import img from '../public/workshop-m3.png'
 
-const FindUs = ({ contact, greeting, bannerURL}) => {
+const FindUs = ({ data }) => {
+    const { contact, greeting, bannerURL} = data
     return (
         <div id='findus' className='w-full h-full my-10 lg:my-16 relative'>
             <div className='flex flex-col justify-center px-8'>
@@ -24,9 +25,9 @@ const FindUs = ({ contact, greeting, bannerURL}) => {
                             {greeting}
                         </p>
                         <address className='text-left text-base md:text-lg lg:text-xl text-[#d7e1f3]'>
-                            <a href='tel:+1-925-264-9709' className='flex items-center tracking-widest py-2'><HiOutlinePhone size={30}/>&nbsp;: {contact.phone}</a>
-                            <a href='mailto:ACutAboveAutoFilms@gmail.com'  target='_blank' rel='noopener noreferrer' className='flex whitespace-nowrap items-center py-2'><HiOutlineMail size={30}/>&nbsp;: {contact.email}</a>
-                            <a href='https://www.instagram.com/acutaboveautofilms/' target='_blank' rel='noopener noreferrer' className='flex whitespace-nowrap items-center tracking-wider py-2'><FaInstagram size={30}/>&nbsp;: @{contact.instagram}</a>
+                            <a href={`tel:+1-${contact.phone}`} className='flex items-center tracking-widest py-2'><HiOutlinePhone size={30}/>&nbsp;: {contact.phone}</a>
+                            <a href={`mailto:${contact.email}`}  target='_blank' rel='noopener noreferrer' className='flex whitespace-nowrap items-center py-2'><HiOutlineMail size={30}/>&nbsp;: {contact.email}</a>
+                            <a href={`https://www.instagram.com/${contact.instagram}/`} target='_blank' rel='noopener noreferrer' className='flex whitespace-nowrap items-center tracking-wider py-2'><FaInstagram size={30}/>&nbsp;: @{contact.instagram}</a>
                             <div className='flex tracking-wider py-2'>
                                 <HiOutlineOfficeBuilding size={30}/>&nbsp;: Modified Motorsports, LLC.<br />
                                 &nbsp;{contact.address}<br />
