@@ -16,7 +16,7 @@ const FindUs = ({ data }) => {
                     <Image src={img} optimize='true' objectFit={'contain'} className='rounded-lg' />
                 </div>
                 <div className='flex flex-col relative justify-around md:-order-1 sm:text-lg lg:text-2xl'>
-                    <p className='mb-8 indent-4'>
+                    <p className='mb-8'>
                         {greeting}
                     </p>
                     <address className='text-left text-base md:text-lg lg:text-xl text-[#d7e1f3]'>
