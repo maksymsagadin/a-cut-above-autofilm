@@ -3,7 +3,6 @@ import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Link as LinkScroll } from 'react-scroll'
-import logo  from '../public/knife-white.png'
 
 const Header = ({ logoURL }) => {
     const router = useRouter()
@@ -18,25 +17,32 @@ const Header = ({ logoURL }) => {
                     </Link>
                 </div>
                 <div className='container'>
-                    {router.pathname == '/' && 
+                    {router.pathname !== '/blog' && 
                     <Link href='/blog'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Blog
                         </span>
                     </Link> }
-                    {router.pathname == '/' && 
+                    {router.pathname === '/' && 
                     <LinkScroll to='findus' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Find Us
                         </span>
                     </LinkScroll>}
-                    {router.pathname == '/' && 
+                    {router.pathname === '/' && 
                     <LinkScroll to='services' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Services
                         </span>
                     </LinkScroll>}
-                    {router.pathname != '/' && <Link href='/'>
+                    {router.pathname === '/' && 
+                    <LinkScroll to='about' offset={-15} smooth='true'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                            About
+                        </span>
+                    </LinkScroll>}
+                    {/* Everywhere else but home */}
+                    {router.pathname !== '/' && <Link href='/'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home
                         </span>
