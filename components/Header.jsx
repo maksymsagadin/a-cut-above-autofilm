@@ -11,7 +11,7 @@ const Header = ({ logoURL }) => {
             <div className='absolute top-0 left-0 md:px-8 px-4 w-full py-4'>
                 <div className='float-left'>
                     <Link href='/'>
-                        <span className='cursor-pointer duration-500 ease-linear inline-block hover:-translate-x-4'>
+                        <span className='cursor-pointer duration-500 ease-linear inline-block hover:translate-x-4'>
                             <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} />
                         </span>
                     </Link>
