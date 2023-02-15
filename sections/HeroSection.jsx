@@ -33,7 +33,7 @@ const HeroSection = ({ data }) => {
               className='flex justify-between items-center w-full'
               href={`tel:+1-${contact.phone}`}
               >
-              Phone <HiOutlinePhone size={30} />
+              Phone Call <HiOutlinePhone size={30} />
             </a>
           </li>
           <li className='w-[160px] h-[60px] rounded-lg flex px-4 items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#333333]'>
@@ -53,7 +53,7 @@ const HeroSection = ({ data }) => {
               target='_blank'
               rel='noopener noreferrer'
               >
-              Email <HiOutlineMail size={30} />
+              Send Email <HiOutlineMail size={30} />
             </a>
           </li>
         </ul>
