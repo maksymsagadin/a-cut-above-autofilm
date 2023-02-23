@@ -15,8 +15,6 @@
   }
 }
 
-
-
 a {
   color: inherit;
   text-decoration: none;
@@ -42,7 +40,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: -50;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,18 +51,6 @@ body {
   padding: 0;
   min-width: 100%;
 }
-
-.hero-section{
-  color: whitesmoke;
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(115deg, #0f0c294a 0%, #302b6350 50%, #24243e4a 100%), url("../public/gt3-top.jpg");
-  background-position: 50% 50%;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-}
-
 
 .text-shadow{
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
@@ -89,16 +75,5 @@ body {
     &:hover{
       width: 60px;
     }
-  }
-}
-
-
-@media only screen and (max-width: 1300px) {
-  .hero-section {
-    background: linear-gradient(45deg, #0f0c2974 0%, #302b6363 50%, #24243e4a 100%), url("../public/gt3-front.jpg");
-    background-position: 50% 10%;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
   }
 }
