@@ -31,7 +31,7 @@ export async function getStaticProps() {
       },
       aboutData: {
         description: result.data.aboutSection.description,
-        imageURL: result.data.aboutSection.bannerImage.url,
+        bannerImage: result.data.aboutSection.bannerImage.url,
       },
       servicesData: {
         greeting: result.data.serviceSection.greeting,
@@ -40,7 +40,7 @@ export async function getStaticProps() {
       findData: {
         contact: result.data.contact,
         greeting: result.data.findUsSection.greeting,
-        bannerURL: result.data.findUsSection.bannerImage.url,
+        bannerImage: result.data.findUsSection.bannerImage.url,
       },
       workData: {
         featuredPosts: result.posts,
