@@ -10,7 +10,7 @@ const Header = ({ logoURL }) => {
         <nav className='container top-0'>
             <div className='absolute top-0 left-0 md:px-8 px-4 w-full py-4 lg:bg-black/25'>
                 <div className='float-left'>
-                    <Link href='/'>
+                    <Link href='/' passHref>
                         <span className='cursor-pointer duration-500 ease-linear inline-block hover:translate-x-4'>
                             <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} fetchpriority='high' />
                         </span>
@@ -18,7 +18,7 @@ const Header = ({ logoURL }) => {
                 </div>
                 <div className='container text-shadow text-gray-200 font-bold cursor-pointer'>
                     {router.pathname !== '/blog' && 
-                    <Link href='/blog'>
+                    <Link href='/blog' passHref>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Blog
                         </span>
@@ -42,7 +42,7 @@ const Header = ({ logoURL }) => {
                         </span>
                     </LinkScroll>}
                     {/* Not Home */}
-                    {router.pathname !== '/' && <Link href='/'>
+                    {router.pathname !== '/' && <Link href='/' passHref>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home
                         </span>

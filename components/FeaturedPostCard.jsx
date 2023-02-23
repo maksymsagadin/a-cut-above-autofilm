@@ -11,7 +11,7 @@ const FeaturedPostCard = ({ post }) => (
         <p className="text-white text-shadow font-semibold text-sm">{post.title}</p>
     </div>
     <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-20 hover:bg-none from-gray-400 via-gray-700 to-black w-full h-96">
-        <Link href={`/post/${post.slug}`}><span className="cursor-pointer absolute w-full h-full" /></Link>
+        <Link href={`/post/${post.slug}`} passHref><span className="cursor-pointer absolute w-full h-full" /></Link>
     </div>
   </div>
 );

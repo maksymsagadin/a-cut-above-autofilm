@@ -14,7 +14,7 @@ const PostCard = ({ post }) => {
         />
       </div>
       <h1 className='transition duration-500 text-center mb-4 cursor-pointer hover:text-blue-500 text-xl font-semibold'>
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/post/${post.slug}`} passHref>
           {post.title}
         </Link>
       </h1>
@@ -23,8 +23,8 @@ const PostCard = ({ post }) => {
           <img 
             alt={post.author.name}
             src={post.author.photo.url}
-            height='30px'
-            width='30px'
+            height='40px'
+            width='40px'
             className='align-middle rounded-full'
           />
           <p className='align-middle inline text-sm ml-2'>{post.author.name}</p>
@@ -40,7 +40,7 @@ const PostCard = ({ post }) => {
       </div>
       <p className='text-center text-lg font-normal mb-4 px-8 lg:px-14'>{post.description}</p>
       <div className='text-center'>
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/post/${post.slug}`} passHref>
           <span className='transition duration-500 transform hover:-translate-y-2 inline-block bg-gray-600 hover:bg-indigo-800 rounded-xl text-gray-200 text-lg px-4 py-2 cursor-pointer'>
             Continue Reading
           </span>
