@@ -12,7 +12,7 @@ const Header = ({ logoURL }) => {
                 <div className='float-left'>
                     <Link href='/'>
                         <span className='cursor-pointer duration-500 ease-linear inline-block hover:translate-x-4'>
-                            <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} />
+                            <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} fetchpriority='high' />
                         </span>
                     </Link>
                 </div>
@@ -41,7 +41,7 @@ const Header = ({ logoURL }) => {
                             About
                         </span>
                     </LinkScroll>}
-                    {/* Everywhere else but home */}
+                    {/* Not Home */}
                     {router.pathname !== '/' && <Link href='/'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 font-semibold cursor-pointer text-gray-200 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Home

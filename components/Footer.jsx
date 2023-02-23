@@ -16,7 +16,7 @@ const Footer = ({ contact }) => {
         </a>
         <div className='flex flex-row justify-center items-center hover:cursor-pointer gap-2' onClick={animateScroll.scrollToTop}>
             <span className='cursor-pointer duration-500 ease-linear inline-block hover:translate-x-3'>
-                <Image src={contact.logo.url} alt={contact.companyName} height={45} width={45} />
+                <Image src={contact.logo.url} alt={contact.companyName} height={45} width={45}/>
             </span>
             <p className='text-xl sm:text-4xl text-yellow-400 font-bold'>{contact.companyName}</p>
         </div>
