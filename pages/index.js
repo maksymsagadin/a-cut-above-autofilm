@@ -17,36 +17,36 @@ export default function Home({ contactData, heroData, aboutData, servicesData, f
 }
 
 export async function getStaticProps() {
-  const mainData = await getMain() || {}
+  const result = await getMain() || {}
   return {
     props: {
-      contactData: mainData.data.contact,
+      contactData: result.data.contact,
       heroData: {
-        heading: mainData.data.heroSection.heading,
-        subheading: mainData.data.heroSection.subHeading,
-        greeting: mainData.data.heroSection.greeting,
-        contact: mainData.data.contact,
-        bgMobile: mainData.data.heroSection.backgroundImageMobile.url,
-        bgDesktop: mainData.data.heroSection.backgroundImageDesktop.url,
+        heading: result.data.heroSection.heading,
+        subheading: result.data.heroSection.subHeading,
+        greeting: result.data.heroSection.greeting,
+        contact: result.data.contact,
+        bgMobile: result.data.heroSection.backgroundImageMobile.url,
+        bgDesktop: result.data.heroSection.backgroundImageDesktop.url,
       },
       aboutData: {
-        description: mainData.data.aboutSection.description,
-        imageURL: mainData.data.aboutSection.bannerImage.url,
+        description: result.data.aboutSection.description,
+        imageURL: result.data.aboutSection.bannerImage.url,
       },
       servicesData: {
-        greeting: mainData.data.serviceSection.greeting,
-        services: mainData.data.serviceSection.services,
+        greeting: result.data.serviceSection.greeting,
+        services: result.data.serviceSection.services,
       },
       findData: {
-        contact: mainData.data.contact,
-        greeting: mainData.data.findUsSection.greeting,
-        bannerURL: mainData.data.findUsSection.bannerImage.url,
+        contact: result.data.contact,
+        greeting: result.data.findUsSection.greeting,
+        bannerURL: result.data.findUsSection.bannerImage.url,
       },
       workData: {
-        featuredPosts: mainData.posts,
-        heading: mainData.data.featuredSection.heading,
-        subheading: mainData.data.featuredSection.subHeading,
-        description: mainData.data.featuredSection.description,
+        featuredPosts: result.posts,
+        heading: result.data.featuredSection.heading,
+        subheading: result.data.featuredSection.subHeading,
+        description: result.data.featuredSection.description,
       }
     }
   }
