@@ -4,7 +4,6 @@ import { HiOutlinePhone } from 'react-icons/hi'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineOfficeBuilding } from 'react-icons/hi'
-import img from '../public/workshop-m3.png'
 import { SectionHeadline } from '../components'
 
 const FindUs = ({ data }) => {
