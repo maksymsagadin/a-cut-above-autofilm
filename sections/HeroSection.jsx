@@ -17,7 +17,7 @@ const HeroSection = ({ data }) => {
     <div className='w-full h-screen'>
       <div className='w-full h-screen overflow-hidden absolute -z-10'>
         {width < 1225 ? <Image src={bgMobile} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>
-         : <Image src={bgDesktop} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>}}
+         : <Image src={bgDesktop} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>}
       </div>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center text-shadow h-full'>
         <h1 className='text-5xl sm:text-8xl font-bold text-yellow-400'>
