@@ -4,53 +4,69 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 
 export const getMain = async () => {
     const query = gql`
-        query GetMain {
-            posts(where: {featuredPost: true}) {
-                author {
-                    name
-                    photo {
-                        url
-                    }
-                }
-                slug
-                title
-                createdAt
-                featuredImage {
+    query Main {
+        posts(where: {featuredPost: true}) {
+            author {
+                name
+                photo {
                     url
                 }
             }
-            contact(where: {acitve: true}) {
-                address
-                instagram
-                phone
-                email
+            createdAt
+            title
+            slug
+            featuredImage {
+                url
+            }
+        }
+        data(where: {active: true}) {
+            aboutSection {
+                description
+                bannerImage {
+                    url
+                }
+            }
+            contact {
                 companyName
+                phone
+                address
+                email
+                instagram
                 logo {
                     url
                 }
             }
-            data(where: {active: true}) {
-                aboutPhoto {
-                  url
-                }
-                findUsGreeting
-                findUsBannerImage {
-                  url
-                }
-                aboutInfo
-                heroHeading
-                heroSubheading
-                heroGreeting
-                featuredWorkHeading
-                featuredWorkSubheading
-                featuredWorkDescription
-                servicesGreeting
+            featuredSection {
+                heading
+                subHeading
+                description
             }
-            services {
-                serviceTitle
-                serviceDescription
+            findUsSection {
+                greeting
+                bannerImage {
+                    url
+                }
+            }
+            heroSection {
+                heading
+                subHeading
+                greeting
+                backgroundImageMobile {
+                    url
+                }
+                backgroundImageDesktop {
+                    url
+                }
+            }
+            serviceSection {
+                greeting
+                services {
+                    serviceTitle
+                    serviceDescription
+                }
             }
         }
+    }
     `
 
     const result = await request(graphqlAPI, query)
