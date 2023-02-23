@@ -1,14 +1,25 @@
 import React from 'react'
+import Image from 'next/image'
 import { FaInstagram } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { HiOutlinePhone } from 'react-icons/hi'
 import { Link as LinkScroll } from 'react-scroll'
 
+
 const HeroSection = ({ data }) => {
-  const { heading, subheading, greeting, contact } = data
+  const { heading, subheading, greeting, contact, bgMobile, bgDesktop } = data
+  const [width, setWidth] = React.useState(0)
+  React.useEffect(() => {
+    setWidth(window.innerWidth)
+  })
+  
   return (
-    <div className='hero-section'>
-      <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center h-full'>
+    <div className='w-full h-screen'>
+      <div className='w-full h-screen overflow-hidden absolute -z-10'>
+        {width < 1225 ? <Image src={bgMobile} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>
+         : <Image src={bgDesktop} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>}}
+      </div>
+      <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center text-shadow h-full'>
         <h1 className='text-5xl sm:text-8xl font-bold text-yellow-400'>
           {heading}
         </h1>
