@@ -8,12 +8,12 @@ import img from '../public/workshop-m3.png'
 import { SectionHeadline } from '../components'
 
 const FindUs = ({ data }) => {
-    const { contact, greeting, bannerURL} = data
+    const { contact, greeting, bannerImage} = data
     return (
         <SectionHeadline title='Find Us' id='findus'>
             <div className='grid md:grid-cols-2 md:order-last gap-8 lg:gap-16 justify-center md:px-4 lg:px-8 xl:px-16 mt-4'>
                 <div className='flex justify-center'>
-                    <Image src={img} optimize='true' objectFit={'contain'} className='rounded-lg' />
+                    <Image src={bannerImage} quality={100} height={1500} width={2000} objectFit={'cover'} className='rounded-lg' />
                 </div>
                 <div className='flex flex-col relative justify-around md:-order-1 sm:text-lg lg:text-2xl'>
                     <p className='mb-8'>
