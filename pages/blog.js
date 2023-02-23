@@ -30,6 +30,6 @@ export default function Home({ posts, contact }) {
 export async function getStaticProps() {
   const blogData = (await getBlog()) || []
   return {
-    props: { posts: blogData.posts, contact: blogData.contact }
+    props: { posts: blogData.posts, contact: blogData.data.contact }
   }
 }

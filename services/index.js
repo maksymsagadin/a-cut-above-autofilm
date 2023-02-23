@@ -76,14 +76,16 @@ export const getMain = async () => {
 export const getBlog = async () => {
     const query = gql`
         query GetBlog {
-            contact(where: {acitve: true}) {
-                address
-                instagram
-                phone
-                email
-                companyName
-                logo {
-                    url
+            data(where: {active: true}) {
+                contact {
+                    companyName
+                    phone
+                    address
+                    email
+                    instagram
+                    logo {
+                        url
+                    }
                 }
             }
             posts(orderBy: createdAt_DESC) {
