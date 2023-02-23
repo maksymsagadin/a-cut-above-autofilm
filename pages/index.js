@@ -20,31 +20,33 @@ export async function getStaticProps() {
   const mainData = await getMain() || {}
   return {
     props: {
-      contactData: mainData.contact,
+      contactData: mainData.data.contact,
       heroData: {
-        heading: mainData.data.heroHeading,
-        subheading: mainData.data.heroSubheading,
-        greeting: mainData.data.heroGreeting,
-        contact: mainData.contact,
+        heading: mainData.data.heroSection.heading,
+        subheading: mainData.data.heroSection.subHeading,
+        greeting: mainData.data.heroSection.greeting,
+        contact: mainData.data.contact,
+        bgMobile: mainData.data.heroSection.backgroundImageMobile.url,
+        bgDesktop: mainData.data.heroSection.backgroundImageDesktop.url,
       },
       aboutData: {
-        description: mainData.data.aboutInfo,
-        imageURL: mainData.data.aboutPhoto.url,
+        description: mainData.data.aboutSection.description,
+        imageURL: mainData.data.aboutSection.bannerImage.url,
       },
       servicesData: {
-        greeting: mainData.data.servicesGreeting,
-        services: mainData.services,
+        greeting: mainData.data.serviceSection.greeting,
+        services: mainData.data.serviceSection.services,
       },
       findData: {
-        contact: mainData.contact,
-        greeting: mainData.data.findUsGreeting,
-        bannerURL: mainData.data.findUsBannerImage.url,
+        contact: mainData.data.contact,
+        greeting: mainData.data.findUsSection.greeting,
+        bannerURL: mainData.data.findUsSection.bannerImage.url,
       },
       workData: {
         featuredPosts: mainData.posts,
-        heading: mainData.data.featuredWorkHeading,
-        subheading: mainData.data.featuredWorkSubheading,
-        description: mainData.data.featuredWorkDescription,
+        heading: mainData.data.featuredSection.heading,
+        subheading: mainData.data.featuredSection.subHeading,
+        description: mainData.data.featuredSection.description,
       }
     }
   }
