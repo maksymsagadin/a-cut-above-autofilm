@@ -109,6 +109,18 @@ export const getBlog = async () => {
                     }
                 }
             }
+            postsConnection(where: {featuredPost: true}) {
+                edges {
+                    node {
+                        title
+                        slug
+                        createdAt
+                        featuredImage {
+                            url
+                        }
+                    }
+                }
+            }
         }
     `
     const result = await request(graphqlAPI, query)
