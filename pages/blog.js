@@ -4,11 +4,11 @@ import { getBlog } from '../services'
 import { FeaturedPosts } from '../sections'
 
 
-export default function Home({ posts, contact }) {
+export default function Home({ posts, contact, featuredPosts }) {
   return (
     <div className="px-4 mt-28 sm:px-8 lg:mb-10">
       <Header logoURL={contact.logo.url} />
-      <FeaturedPosts />
+      <FeaturedPosts posts={featuredPosts} />
       <div className='grid lg:grid-cols-12 grid-cols-1 lg:gap-8'>
         {/* Left Section */}
         <div className='lg:col-span-8 col-span-1'>
@@ -30,6 +30,6 @@ export default function Home({ posts, contact }) {
 export async function getStaticProps() {
   const blogData = (await getBlog()) || []
   return {
-    props: { posts: blogData.posts, contact: blogData.data.contact }
+    props: { posts: blogData.posts, contact: blogData.data.contact, featuredPosts: blogData.postsConnection.edges }
   }
 }
