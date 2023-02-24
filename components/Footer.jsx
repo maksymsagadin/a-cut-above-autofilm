@@ -10,7 +10,7 @@ const Footer = ({ contact }) => {
             className=''
             href={`https://www.instagram.com/${contact.instagram}/`}
             target='_blank'
-            rel='referrer'
+            rel="noreferrer"
             >
             <FaInstagram size={40} />
         </a>
