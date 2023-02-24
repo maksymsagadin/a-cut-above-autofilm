@@ -118,14 +118,16 @@ export const getBlog = async () => {
 export const getPostDetails = async (slug) => {
     const query = gql`
         query GetPostDetails($slug: String!) {
-            contact(where: {acitve: true}) {
-                address
-                instagram
-                phone
-                email
-                companyName
-                logo {
-                    url
+            data(where: {active: true}) {
+                contact {
+                    companyName
+                    phone
+                    address
+                    email
+                    instagram
+                    logo {
+                        url
+                    }
                 }
             }
             post(where: { slug: $slug }) {
@@ -254,14 +256,16 @@ export const getCategories = async () => {
 export const getCategoryPost = async (slug) => {
     const query = gql`
         query GetCategoryPost ($slug: String!) {
-            contact(where: {acitve: true}) {
-                address
-                instagram
-                phone
-                email
-                companyName
-                logo {
-                    url
+            data(where: {active: true}) {
+                contact {
+                    companyName
+                    phone
+                    address
+                    email
+                    instagram
+                    logo {
+                        url
+                    }
                 }
             }
             posts(where: {categories_some: {slug: $slug}}) {

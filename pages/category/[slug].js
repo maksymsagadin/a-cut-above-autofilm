@@ -36,7 +36,7 @@ export default CategoryPost
 export async function getStaticProps({ params }) {
     const results = await getCategoryPost(params.slug)
     return {
-        props: { posts: results.posts, contact: results.contact  },
+        props: { posts: results.posts, contact: results.data.contact },
     }
 }
 
