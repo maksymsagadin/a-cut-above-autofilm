@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
 import { FeaturedPostCard } from '../components'
-import { getFeaturedPosts } from '../services'
 
 const responsive = {
   superLargeDesktop: {
@@ -26,21 +25,11 @@ const responsive = {
 }
 
 
-const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([])
-  const [dataLoaded, setDataLoaded] = useState(false)
-
-  useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result);
-      setDataLoaded(true);
-    })
-  }, [])
-
+const FeaturedPosts = ({ posts }) => {
   return (
     <div className="mb-8">
       <Carousel infinite={true} autoPlay={true} autoPlaySpeed={4000} customTransition={'transform 2000ms ease-in-out'} transitionDuration={2000} arrows={true}  responsive={responsive} itemClass="px-4" >
-        {dataLoaded && featuredPosts.map((post, index) => (
+        {posts && posts.map((post, index) => (
           <FeaturedPostCard key={index} post={post} />
         ))}
       </Carousel>
