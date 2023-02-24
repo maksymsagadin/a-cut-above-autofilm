@@ -4,8 +4,8 @@ const SectionHeadline = ({ children, title, id}) => {
     return (
         <section id={id} className='w-full h-full my-10 lg:my-16 relative'>
             <div className='flex flex-col justify-center px-8'>
-                <div className='pb-8 px-2'>
-                    <p className='text-4xl px-2 font-bold border-b-4 border-yellow-400'>
+                <div className='pb-4 lg:pb-8'>
+                    <p className='text-4xl px-4 lg:px-10 lg:py-4 font-bold border-b-4 border-yellow-400'>
                         {title}
                     </p>
                 </div>

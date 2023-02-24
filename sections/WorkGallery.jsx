@@ -18,7 +18,7 @@ const WorkGallery = ({ data }) => {
 
     return (
         <SectionHeadline title={'Proof of Work'}>
-            <div className='relative overflow-hidden flex flex-col gap-8 lg:flex-row px-8 lg:pr-0'>
+            <div className='relative overflow-hidden flex flex-col gap-8 md:px-4 lg:flex-row lg:pr-0'>
                 {/* Left Column */}
                 <div className='flex flex-col items-start justify-center w-full lg:max-w-[33%]'>
                     <h2 className='text-2xl md:text-4xl font-bold text-[#d7e1f3]'>
@@ -37,8 +37,8 @@ const WorkGallery = ({ data }) => {
                     </Link>
                 </div>
                 {/* Right Column / Carousel */}
-                <div className='h-full relative rounded-lg overflow-hidden mx-auto w-full lg:rounded-r-none lg:max-w-[66%] lg:my-8'>
-                    <div className='flex no-scrollbar relative overflow-x-scroll rounded-lg' ref={scrollRef}>
+                <div className='h-full relative rounded-lg overflow-hidden mx-auto w-full lg:max-w-[66%] lg:my-8'>
+                    <div className='flex no-scrollbar relative overflow-x-scroll' ref={scrollRef}>
                     {featuredPosts && [featuredPosts[0], featuredPosts[1], featuredPosts[2], featuredPosts[3], featuredPosts[4]].map((post, index) => (
                         <div key={index}>
                             <FeaturedImage post={post} />
