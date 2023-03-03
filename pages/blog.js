@@ -16,9 +16,8 @@ export default function Home({ posts, contact, featuredPosts }) {
         </div>
         {/* Right Section */}
         <div className='col-span-1 lg:col-span-4'>
-            <div className='relative text-gray-200 lg:sticky'>
+            <div className='relative text-gray-200 lg:sticky top-8'>
               <Categories />
-              <PostWidget />
             </div>
         </div>
       </div>
