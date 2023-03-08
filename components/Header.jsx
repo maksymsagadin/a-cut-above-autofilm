@@ -24,6 +24,12 @@ const Header = ({ logoURL }) => {
                         </span>
                     </Link> }
                     {router.pathname === '/' && 
+                    <LinkScroll to='about' offset={-15} smooth='true'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4  hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                            About
+                        </span>
+                    </LinkScroll>}
+                    {router.pathname === '/' && 
                     <LinkScroll to='findus' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Find Us
@@ -33,12 +39,6 @@ const Header = ({ logoURL }) => {
                     <LinkScroll to='services' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
                             Services
-                        </span>
-                    </LinkScroll>}
-                    {router.pathname === '/' && 
-                    <LinkScroll to='about' offset={-15} smooth='true'>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4  hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
-                            About
                         </span>
                     </LinkScroll>}
                     {/* Not Home */}

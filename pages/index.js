@@ -7,10 +7,10 @@ export default function Home({ contactData, heroData, aboutData, servicesData, f
     <div className="container mx-auto lg:mb-10">
       <Header logoURL={contactData.logo.url} />
       <HeroSection data={heroData} />
-      <About data={aboutData} />
       <Services data={servicesData} />
       <FindUs data={findData} />
       <WorkGallery data={workData} />
+      <About data={aboutData} />
       <Footer contact={contactData} />
     </div>
   )

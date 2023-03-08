@@ -16,7 +16,7 @@ const HeroSection = ({ data }) => {
   return (
     <div className='w-full h-screen'>
       <div className='w-full h-screen overflow-hidden absolute -z-10'>
-        {width < 1225 ? <Image src={bgMobile} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>
+        {width < 768 ? <Image src={bgMobile} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>
          : <Image src={bgDesktop} alt='' layout='fill' objectFit='cover' objectPosition='center' priority fetchpriority='high' quality={100}/>}
       </div>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center text-shadow h-full'>
@@ -30,7 +30,7 @@ const HeroSection = ({ data }) => {
           {greeting}
         </p>
         <div className='flex flex-row'>
-          <LinkScroll to='about' offset={-15} smooth='true'>
+          <LinkScroll to='services' offset={-15} smooth='true'>
             <button className='border-2 rounded-lg bg-[#3378ca] bg-opacity-50 px-6 py-3 my-1 transition duration-500 hover:bg-opacity-100 hover:border-[#3378ca]'>
               Get To Know Us
             </button>
