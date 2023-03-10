@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
-import ScrollLink from './ScrollLink'
+import {Link as LinkScroll} from 'react-scroll'
 
 const Header = ({ logoURL }) => {
     const router = useRouter()
@@ -24,23 +24,23 @@ const Header = ({ logoURL }) => {
                         </span>
                     </Link> }
                     {router.pathname === '/' && 
-                    <ScrollLink to='about'>
+                    <LinkScroll to='about' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4   inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             About
                         </span>
-                    </ScrollLink>}
+                    </LinkScroll>}
                     {router.pathname === '/' && 
-                    <ScrollLink to='findus'>
+                    <LinkScroll to='findus' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             Find Us
                         </span>
-                    </ScrollLink>}
+                    </LinkScroll>}
                     {router.pathname === '/' && 
-                    <ScrollLink to='services'>
+                    <LinkScroll to='services' offset={-15} smooth='true'>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             Services
                         </span>
-                    </ScrollLink>}
+                    </LinkScroll>}
                     {/* Not Home */}
                     {router.pathname !== '/' && <Link href='/' passHref>
                         <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2  md:hover:text-blue-300'>

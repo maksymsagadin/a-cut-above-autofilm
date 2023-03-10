@@ -1,11 +1,13 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { Link as LinkScroll, animateScroll } from 'react-scroll'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaInstagram } from 'react-icons/fa'
-import ScrollLink from './ScrollLink'
 
 const Footer = ({ contact }) => {
+  const router = useRouter()
+
   const { companyName, phone, address, instagram, affiliateLinks, logo } = contact
   return (
     <footer className='grid grid-cols-2 md:grid-cols-4 gap-2 m-2 my-4 md:m-8'>
@@ -44,18 +46,15 @@ const Footer = ({ contact }) => {
       <nav className='mx-auto order-2 md:order-3 md:col-span-1'>
         <span className='font-bold border-yellow-400 text-lg border-b-[2px]'>Quick Nav Links</span>
         <ul>
-          <li>
-            <ScrollLink to='services'>Services</ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to='findus'>Find Us</ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to='about'>About</ScrollLink>
-          </li>
-          <li>
-            <Link href='/blog' passHref>Blog</Link>
-          </li>
+          {router.pathname === '/' && 
+          <>
+            <li> <LinkScroll to='services' offset={-15} smooth='true'>Services</LinkScroll> </li>
+            <li> <LinkScroll to='findus' offset={-15} smooth='true'>Find Us</LinkScroll> </li>
+            <li> <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll> </li>
+            <li> <Link href='/blog' passHref>Blog</Link> </li>
+          </>}
+          {router.pathname !== '/' && 
+            <li> <Link href='/' passHref>Home</Link> </li>}
         </ul>
       </nav>
     </footer>
