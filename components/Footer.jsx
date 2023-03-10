@@ -48,13 +48,13 @@ const Footer = ({ contact }) => {
         <ul>
           {router.pathname === '/' && 
           <>
-            <li> <LinkScroll to='services' offset={-15} smooth='true'>Services</LinkScroll> </li>
-            <li> <LinkScroll to='findus' offset={-15} smooth='true'>Find Us</LinkScroll> </li>
-            <li> <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll> </li>
-            <li> <Link href='/blog' passHref>Blog</Link> </li>
+            <li> <LinkScroll className='cursor-pointer' to='services' offset={-15} smooth='true'>Services</LinkScroll> </li>
+            <li> <LinkScroll className='cursor-pointer' to='findus' offset={-15} smooth='true'>Find Us</LinkScroll> </li>
+            <li> <LinkScroll className='cursor-pointer' to='about' offset={-15} smooth='true'>About</LinkScroll> </li>
+            <li> <Link className='cursor-pointer' href='/blog' passHref>Blog</Link> </li>
           </>}
           {router.pathname !== '/' && 
-            <li> <Link href='/' passHref>Home</Link> </li>}
+            <li> <Link className='cursor-pointer' href='/' passHref>Home</Link> </li>}
         </ul>
       </nav>
     </footer>
