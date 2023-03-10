@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Link as LinkScroll } from 'react-scroll'
+import {Link as LinkScroll} from 'react-scroll'
 
 const Header = ({ logoURL }) => {
     const router = useRouter()
@@ -19,31 +19,31 @@ const Header = ({ logoURL }) => {
                 <div className='container text-shadow text-gray-200 font-bold cursor-pointer'>
                     {router.pathname !== '/blog' && 
                     <Link href='/blog' passHref>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4  inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             Blog
                         </span>
                     </Link> }
                     {router.pathname === '/' && 
                     <LinkScroll to='about' offset={-15} smooth='true'>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4  hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4   inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             About
                         </span>
                     </LinkScroll>}
                     {router.pathname === '/' && 
                     <LinkScroll to='findus' offset={-15} smooth='true'>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             Find Us
                         </span>
                     </LinkScroll>}
                     {router.pathname === '/' && 
                     <LinkScroll to='services' offset={-15} smooth='true'>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2 md:hover:text-blue-300'>
                             Services
                         </span>
                     </LinkScroll>}
                     {/* Not Home */}
                     {router.pathname !== '/' && <Link href='/' passHref>
-                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 hover:text-blue-300 inline-block transition duration-500 transform hover:translate-y-2'>
+                        <span className='float-right text-lg p-1 md:text-2xl md:p-4 inline-block transition duration-500 transform md:hover:translate-y-2  md:hover:text-blue-300'>
                             Home
                         </span>
                     </Link>}

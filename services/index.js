@@ -32,6 +32,10 @@ export const getMain = async () => {
                 address
                 email
                 instagram
+                affiliateLinks {
+                    name
+                    url
+                }
                 logo {
                     url
                 }
@@ -83,6 +87,10 @@ export const getBlog = async () => {
                     address
                     email
                     instagram
+                    affiliateLinks {
+                        name
+                        url
+                    }
                     logo {
                         url
                     }
@@ -137,6 +145,10 @@ export const getPostDetails = async (slug) => {
                     address
                     email
                     instagram
+                    affiliateLinks {
+                        name
+                        url
+                    }
                     logo {
                         url
                     }
@@ -275,6 +287,10 @@ export const getCategoryPost = async (slug) => {
                     address
                     email
                     instagram
+                    affiliateLinks {
+                        name
+                        url
+                    }
                     logo {
                         url
                     }
