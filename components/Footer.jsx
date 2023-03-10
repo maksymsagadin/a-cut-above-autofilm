@@ -1,8 +1,9 @@
 import React from 'react'
-import { FaInstagram } from 'react-icons/fa'
 import { Link as LinkScroll, animateScroll } from 'react-scroll'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaInstagram } from 'react-icons/fa'
+import ScrollLink from './ScrollLink'
 
 const Footer = ({ contact }) => {
   const { companyName, phone, address, instagram, affiliateLinks, logo } = contact
@@ -13,7 +14,7 @@ const Footer = ({ contact }) => {
         <span className='font-bold border-b-[2px] border-yellow-400 text-lg'>Affiliate Links</span>
         <ul>
           {affiliateLinks.map((affiliate) => (
-            <li>
+            <li key={`${affiliate.name}`}>
               <a href={`${affiliate.url}`} target='_blank' rel="noopener">
                 {affiliate.name}
               </a>
@@ -44,13 +45,13 @@ const Footer = ({ contact }) => {
         <span className='font-bold border-yellow-400 text-lg border-b-[2px]'>Quick Nav Links</span>
         <ul>
           <li>
-            <LinkScroll to='services' offset={-15} smooth='true'>Services</LinkScroll>
+            <ScrollLink to='services'>Services</ScrollLink>
           </li>
           <li>
-            <LinkScroll to='findus' offset={-15} smooth='true'>Find Us</LinkScroll>
+            <ScrollLink to='findus'>Find Us</ScrollLink>
           </li>
           <li>
-            <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll>
+            <ScrollLink to='about'>About</ScrollLink>
           </li>
           <li>
             <Link href='/blog' passHref>Blog</Link>
