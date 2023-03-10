@@ -15,7 +15,7 @@ const Footer = ({ contact }) => {
         <ul>
           {affiliateLinks.map((affiliate) => (
             <li key={`${affiliate.name}`}>
-              <a href={`${affiliate.url}`} target='_blank' rel="noopener">
+              <a href={`${affiliate.url}`} target='_blank' rel="noreferrer">
                 {affiliate.name}
               </a>
             </li>
@@ -27,7 +27,7 @@ const Footer = ({ contact }) => {
         <a
             href={`https://www.instagram.com/${instagram}/`}
             target='_blank'
-            rel="noopener"
+            rel="noreferrer"
             >
             <FaInstagram size={40} />
         </a>
