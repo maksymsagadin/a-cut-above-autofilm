@@ -14,7 +14,7 @@ const PostDetails = ({ post, contact }) => {
     return (
         <div className='mx-auto mt-28 px-4 sm:px-8 mb-8'>
             <Header logoURL={contact.logo.url} />
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
                 <div className='col-span-1 lg:col-span-9'>
                     <PostDetail post={post} />
                     <Author author={post.author} />
@@ -22,7 +22,7 @@ const PostDetails = ({ post, contact }) => {
                     <Comments slug={post.slug} />
                 </div>
                 <div className='col-span-1 lg:col-span-3'>
-                    <div className='relative lg:sticky top-8'>
+                    <div className='relative lg:sticky lg:top-8'>
                         <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
                         <Categories />
                     </div>
