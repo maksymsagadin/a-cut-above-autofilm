@@ -1,26 +1,26 @@
 import Head from 'next/head'
-import { Header, Footer, PostCard, Categories, PostWidget } from '../components'
+import { Header, Footer, PostCard, Categories, CategoriesFilter, PostWidget } from '../components'
 import { getBlog } from '../services'
 import { FeaturedPosts } from '../sections'
+import { SectionHeadline } from '../components'
 
 
-export default function Home({ posts, contact, featuredPosts }) {
+export default function Home({ posts, categories, contact, featuredPosts }) {
   return (
-    <div className="px-4 mt-28 sm:px-8 lg:mb-10">
+    <div className="mt-28 lg:mb-10">
       <Header logoURL={contact.logo.url} />
       <FeaturedPosts posts={featuredPosts} />
-      <div className='grid grid-cols-1 lg:grid-cols-12 lg:gap-8'>
-        {/* Left Section */}
-        <div className='col-span-1 lg:col-span-8'>
-          {posts.map((post) => <PostCard post={post} key={post.title} />)}
+      <SectionHeadline title='Blog'>
+        {/* <Categories /> */}
+        <CategoriesFilter categories={categories} />
+        <div className='mt-4 md:mt-0 md:columns-2 lg:columns-3 gap-4 lg:gap-8'>
+              {posts.map((post) => 
+                <div key={post.title} className='break-inside-avoid'>
+                  <PostCard post={post} />
+                </div>
+              )}
         </div>
-        {/* Right Section */}
-        <div className='col-span-1 lg:col-span-4'>
-            <div className='relative text-gray-200 lg:sticky top-8'>
-              <Categories />
-            </div>
-        </div>
-      </div>
+      </SectionHeadline>
       <Footer contact={contact}/>
     </div>
   )
@@ -29,6 +29,6 @@ export default function Home({ posts, contact, featuredPosts }) {
 export async function getStaticProps() {
   const blogData = (await getBlog()) || []
   return {
-    props: { posts: blogData.posts, contact: blogData.data.contact, featuredPosts: blogData.postsConnection.edges }
+    props: { posts: blogData.posts, categories: blogData.categories, contact: blogData.data.contact, featuredPosts: blogData.postsConnection.edges }
   }
 }
