@@ -1,5 +1,6 @@
 export { default as PostCard } from './PostCard'
 export { default as Categories } from './Categories'
+export { default as CategoriesFilter } from './CategoriesFilter'
 export { default as PostWidget } from './PostWidget'
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
