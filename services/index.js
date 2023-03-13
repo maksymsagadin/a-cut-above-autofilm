@@ -96,6 +96,10 @@ export const getBlog = async () => {
                     }
                 }
             }
+            categories {
+                name
+                slug
+            }
             posts(orderBy: createdAt_DESC) {
                 slug
                 title
