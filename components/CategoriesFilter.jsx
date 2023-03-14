@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react'
-
 const CategoriesFilter = ({ categories, onFilterChange }) => {
     return (
         <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-4 mb-4 lg:mb-8'>
