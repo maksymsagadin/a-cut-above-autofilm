@@ -1,4 +1,4 @@
-import { getFeaturedPosts, getMain } from '../services'
+import { getMain } from '../services'
 import { HeroSection, About, Services, FindUs, WorkGallery } from '../sections'
 import { Header, Footer } from '../components'
 
@@ -18,6 +18,7 @@ export default function Home({ contactData, heroData, aboutData, servicesData, f
 
 export async function getStaticProps() {
   const result = await getMain() || {}
+  // Cache the data for 1 hour (3600 seconds)
   return {
     props: {
       contactData: result.data.contact,
@@ -48,6 +49,7 @@ export async function getStaticProps() {
         subheading: result.data.featuredSection.subHeading,
         description: result.data.featuredSection.description,
       }
-    }
+    },
+    revalidate: 3600 // Regenerate the page every hour
   }
 }

@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-
-const CategoriesFilter = ({ categories }) => {
-    // console.log(categories)
+const CategoriesFilter = ({ categories, onFilterChange }) => {
     return (
-        <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-8 mb-8 pb-12'>
-            <h3 className='text-xl mb-3 font-semibold border-b-2 pb-3'>
+        <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-4 mb-4 lg:mb-8'>
+            <h3 className='text-xl mb-3 font-semibold border-b-2 border-yellow-400 pb-3'>
                 { categories.length < 2 ? 'Category' : 'Categories' }
             </h3>
-            <div>
-                {categories.map((category,index) => (
-                    <div key={category.name}>
-                        <input type='checkbox' id={category.name} name={category.name} value={category.name} />
-                        <label for={category.name} className='px-4'>{category.name}</label>
-                    </div>
+            <ul className='columns-2 sm:columns-3 items-start lg:flex lg:justify-evenly gap-4'>
+                {categories.map((category) => (
+                    <li key={category.name} className='flex lg:flex-col items-center py-1 md:p-2'>
+                        <input type='checkbox' onChange={onFilterChange} id={category.name} name={category.name} value={category.name} className='w-4 h-4 rounded checked:accent-yellow-400'/>
+                        <label htmlFor={category.name} className='px-2 lg:pt-2 text-center'>{category.name}</label>
+                    </li>
                 ))}
-            </div>
-            
+            </ul>
         </div>
     )
 }

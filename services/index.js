@@ -109,6 +109,7 @@ export const getBlog = async () => {
                     name
                     slug
                 }
+                featuredPost
                 featuredImage {
                     url
                 }
@@ -118,18 +119,6 @@ export const getBlog = async () => {
                     name
                     photo {
                         url
-                    }
-                }
-            }
-            postsConnection(where: {featuredPost: true}) {
-                edges {
-                    node {
-                        title
-                        slug
-                        createdAt
-                        featuredImage {
-                            url
-                        }
                     }
                 }
             }
@@ -225,7 +214,7 @@ export const getRecentPosts = async () => {
         query GetRecentPosts {
             posts(
                 orderBy: createdAt_DESC
-                last: 3
+                last: 6
             ) {
                 title
                 slug
@@ -245,7 +234,8 @@ export const getSimilarPosts = async (categories, slug) => {
         query GetSimilarPosts($slug: String!, $categories: [String!]) {
             posts(
                 where: { slug_not: $slug, AND: { categories_some: { slug_in: $categories}}}
-                last: 3
+                orderBy: createdAt_DESC
+                last: 6
             ) {
                 title
                 slug
