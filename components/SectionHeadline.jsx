@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SectionHeadline = ({ children, title, id}) => {
     return (
         <section id={id} className='w-full h-full my-4 lg:my-8 relative'>

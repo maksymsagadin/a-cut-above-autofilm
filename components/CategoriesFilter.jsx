@@ -1,4 +1,8 @@
-const CategoriesFilter = ({ categories, onFilterChange }) => {
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+
+const CategoriesFilter = ({ categories }) => {
+    const CategoriesFilter = ({ categories, onFilterChange }) => {
     return (
         <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-4 mb-4 lg:mb-8'>
             <h3 className='text-xl mb-3 font-semibold border-b-2 border-yellow-400 pb-3'>
