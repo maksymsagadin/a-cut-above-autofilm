@@ -1,9 +1,6 @@
-import React from 'react'
-import moment from 'moment';
-import Link from 'next/link';
+import Link from 'next/link'
 
 const PostCard = ({ post }) => {
-  
   return (
     <div className='bg-gray-200 bg-opacity-10 text-gray-200 shadow-lg rounded-lg p-0 pb-4 mb-4 md:p-6 lg:p-8 lg:mb-8'>
       <div className='relative overflow-hidden mb-6'>
