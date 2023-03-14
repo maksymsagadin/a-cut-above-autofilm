@@ -12,7 +12,6 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
   })
 
   const handleFilterChange = useCallback(event => {
-    console.log(event.target.value, event.target.checked)
     setPosts(previousState => {
       let filters = new Set(previousState.filters)
       let filteredPosts = posts
@@ -71,12 +70,14 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
 
 export async function getStaticProps() {
   const blogData = (await getBlog()) || []
+  // Cache the data for 1 hour (3600 seconds)
   return {
     props: { 
       posts: blogData.posts,
       categories: blogData.categories,
       contact: blogData.data.contact,
       featuredPosts: blogData.postsConnection.edges
-    }
+    },
+    // revalidate: 3600 // Regenerate the page every hour
   }
 }
