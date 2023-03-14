@@ -36,13 +36,13 @@ const responsive = {
 
 const ImageCarousel = ({ posts }) => {
     return (
-        <div className="mb-4 lg:mb-8">
+        <>
             <Carousel infinite={true} autoPlay={true} autoPlaySpeed={3000} partialVisbile={true} pauseOnHover={true} customTransition={'transform 1000ms ease-in-out'} transitionDuration={2000} arrows={true} responsive={responsive} >
                 {posts && posts.map((post, index) => (
                     <FeaturedImage key={index} post={post} />
                 ))}
             </Carousel>
-        </div>
+        </>
     )
 }
 
