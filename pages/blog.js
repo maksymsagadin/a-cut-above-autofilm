@@ -78,6 +78,6 @@ export async function getStaticProps() {
       contact: blogData.data.contact,
       featuredPosts: blogData.postsConnection.edges
     },
-    // revalidate: 3600 // Regenerate the page every hour
+    revalidate: 3600 // Regenerate the page every hour
   }
 }
