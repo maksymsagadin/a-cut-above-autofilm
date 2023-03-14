@@ -109,6 +109,7 @@ export const getBlog = async () => {
                     name
                     slug
                 }
+                featuredPost
                 featuredImage {
                     url
                 }
@@ -118,18 +119,6 @@ export const getBlog = async () => {
                     name
                     photo {
                         url
-                    }
-                }
-            }
-            postsConnection(where: {featuredPost: true}) {
-                edges {
-                    node {
-                        title
-                        slug
-                        createdAt
-                        featuredImage {
-                            url
-                        }
                     }
                 }
             }
