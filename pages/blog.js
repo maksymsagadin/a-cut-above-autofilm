@@ -10,7 +10,7 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
     filteredPosts: posts,
     filters: new Set(),
   })
-
+  
   const handleFilterChange = useCallback(event => {
     setPosts(previousState => {
       let filters = new Set(previousState.filters)
@@ -76,7 +76,7 @@ export async function getStaticProps() {
       posts: blogData.posts,
       categories: blogData.categories,
       contact: blogData.data.contact,
-      featuredPosts: blogData.postsConnection.edges
+      featuredPosts: blogData.posts.filter(post => post.featuredPost),
     },
     revalidate: 3600 // Regenerate the page every hour
   }
