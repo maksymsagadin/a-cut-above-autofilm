@@ -1,8 +1,6 @@
-import React from 'react'
 import { useRouter } from 'next/router'
-
 import { getPostDetails, getPosts } from '../../services'
-import { Header, Footer, PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components'
+import { Header, Footer, PostDetail, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components'
 
 
 const PostDetails = ({ post, contact }) => {
@@ -33,12 +31,15 @@ const PostDetails = ({ post, contact }) => {
 }
 
 export default PostDetails
-
 // Fetch data at build time
 export async function getStaticProps({ params }) {
     const results = await getPostDetails( params.slug )
+      // Cache the data for 1 hour (3600 seconds)
     return {
-        props: { post: results.post, contact: results.data.contact }
+        props: { 
+            post: results.post, contact: results.data.contact 
+        },
+        revalidate: 3600 // Regenerate the page every hour
     }
 }
 
