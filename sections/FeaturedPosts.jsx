@@ -25,7 +25,6 @@ const responsive = {
 
 
 const FeaturedPosts = ({ posts }) => {
-  console.log(posts)
   return (
     <div className="mb-8">
       <Carousel infinite={true} autoPlay={true} autoPlaySpeed={4000} customTransition={'transform 2000ms ease-in-out'} transitionDuration={2000} arrows={true}  responsive={responsive} itemClass="px-4" >
