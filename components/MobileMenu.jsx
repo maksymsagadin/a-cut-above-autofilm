@@ -32,16 +32,16 @@ const MobileMenu = ({ showMenu, toggleMenu }) => {
             {router.pathname !== '/' && 
             <>
                 <li className={classNames.listItem}>
-                    <Link href='/' passHref>Home</Link>
+                    <Link href='/#services' passHref>Services</Link>
                 </li>
-                <li className={classNames.listItem}>
-                    <Link href='/#about' passHref>About</Link>
-                    </li>
                 <li className={classNames.listItem}>
                     <Link href='/#findus' passHref>Find Us</Link>
                 </li>
                 <li className={classNames.listItem}>
-                    <Link href='/#services' passHref>Services</Link>
+                    <Link href='/#about' passHref>About</Link>
+                </li>
+                <li className={classNames.listItem}>
+                    <Link href='/' passHref>Home</Link>
                 </li>
             </>}
             {/* If not on blog page */}
