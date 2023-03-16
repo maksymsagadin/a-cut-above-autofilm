@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Link as LinkScroll } from 'react-scroll'
-import bgMobileBlur from '../public/gt3-mobile-blur.jpg'
-import bgDesktopBlur from '../public/gt3-desktop-blur.jpg'
 import { ContactTabs } from '../components'
 
 const HeroSection = ({ data }) => {
@@ -21,14 +19,12 @@ const HeroSection = ({ data }) => {
       <div className='w-full h-screen absolute -z-10'>
         <Image 
         className='brightness-75 md:filter-none'
-        src={width < 768 ? bgMobile : bgDesktop} 
-        blurDataURL={width < 768 ? bgMobileBlur : bgDesktopBlur} 
-        placeholder='blur' 
+        src={width < 768 ? bgMobile : bgDesktop}
         alt='' 
         layout='fill' 
         objectFit='cover' 
         objectPosition='center' 
-        priority 
+        priority
         quality={100}/>
       </div>
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center text-center text-shadow h-full'>
