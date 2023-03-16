@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Paint Protection Film by those who care!" />
         <meta property="og:title" content="A Cut Above Autofilm" />
         <meta property="og:description" content="Paint Protection Film by those who care!" />
-        <link rel="icon" href="/knife-color.png" />
+        <link rel="icon" href="/ACA-logo.png" />
       </Head>
       <Component className='font-raleway' {...pageProps} />
     </Layout>
