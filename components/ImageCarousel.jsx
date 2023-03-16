@@ -44,14 +44,15 @@ const ImageCarousel = ({ posts }) => {
             <Carousel 
             infinite={true} 
             autoPlay={true} 
-            autoPlaySpeed={4000}
+            autoPlaySpeed={2500}
             removeArrowOnDeviceType={['mobile','tablet','largeTablet']} 
-            pauseOnHover={true} customTransition={'transform 800ms ease-in-out'} 
-            transitionDuration={2000} 
+            pauseOnHover={true} 
+            customTransition={'transform 1200ms ease-in-out'}
+            transitionDuration={1200} 
             arrows={true} 
             responsive={responsive} >
-                {posts && posts.map((post, index) => (
-                    <FeaturedImage key={index} post={post} />
+                {posts && posts.map((post) => (
+                    <FeaturedImage key={post.title} post={post} />
                 ))}
             </Carousel>
         </>
