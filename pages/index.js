@@ -4,7 +4,7 @@ import { Header, Footer } from '../components'
 
 export default function Home({ contactData, heroData, aboutData, servicesData, findData, workData }) {
   return (
-    <div className="container mx-auto lg:mb-10">
+    <>
       <Header logoURL={contactData.logo.url} />
       <HeroSection data={heroData} />
       <Services data={servicesData} />
@@ -12,7 +12,7 @@ export default function Home({ contactData, heroData, aboutData, servicesData, f
       <WorkGallery data={workData} />
       <About data={aboutData} />
       <Footer contact={contactData} />
-    </div>
+    </>
   )
 }
 
