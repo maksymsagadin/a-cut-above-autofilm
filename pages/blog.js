@@ -1,7 +1,6 @@
 import { useState, useCallback, useMemo } from 'react'
-import { Header, Footer, PostCard, CategoriesFilter} from '../components'
+import { Header, Footer, PostCard, CategoriesFilter, ImageCarousel} from '../components'
 import { getBlog } from '../services'
-import { FeaturedPosts } from '../sections'
 import { SectionHeadline } from '../components'
 
 
@@ -49,9 +48,10 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
   }, [categories])
 
   return (
-    <div className="mt-28 lg:mb-10">
+    <div className="mt-[6.5rem]">
       <Header logoURL={contact.logo.url} />
-      <FeaturedPosts posts={featuredPosts} />
+      <ImageCarousel posts={featuredPosts} />
+      {/* <FeaturedPosts posts={featuredPosts} /> */}
       <SectionHeadline title='Blog'>
         {/* <Categories /> */}
         <CategoriesFilter categories={categories} onFilterChange={handleFilterChange} />
