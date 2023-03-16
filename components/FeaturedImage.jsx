@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const FeaturedImage = ({ post }) => {
   return (
     <Link href={`/post/${post.slug}`} passHref >
-        <div className='cursor-pointer bg-center bg-no-repeat bg-cover w-[250px] h-[400px] lg:w-[400px] lg:h-[550px]' style={{ backgroundImage: `url('${post.featuredImage.url}')` }} >
-          {/* <img src={`${post.featuredImage.url}`} alt={`${post.alt}`} className='h-full' /> */}
-          <p className='cursor-pointer h-full w-full flex justify-center items-center opacity-0 hover:opacity-50 bg-black text-[#d7e1f3]'>{post.title}</p>
+        <div className='cursor-pointer z-10 w-[250px] h-[400px] lg:w-[400px] lg:h-[550px]'>
+          <Image src={post.featuredImage.url} alt={post.title} layout='fill' objectFit='cover'/>
+          <p className='cursor-pointer font-semibold absolute h-full w-full flex items-end p-2 opacity-0 hover:bg-opacity-30 hover:opacity-90 bg-black'>{post.title}</p>
         </div>
     </Link>
   )

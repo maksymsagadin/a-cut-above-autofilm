@@ -1,20 +1,8 @@
-import React from 'react'
 import Link from 'next/link'
-import { CgChevronDoubleLeftR, CgChevronDoubleRightR } from 'react-icons/cg'
-import { FeaturedImage, SectionHeadline } from '../components'
+import { SectionHeadline, ImageCarousel } from '../components'
 
 const WorkGallery = ({ data }) => {
     const { featuredPosts, heading, subheading, description } = data
-    const scrollRef = React.useRef(null)
-    const scroll = (direction) => {
-        const { current } = scrollRef;
-    
-        if (direction === 'left') {
-          current.scrollLeft -= 300
-        } else {
-          current.scrollLeft += 300
-        }
-    }
 
     return (
         <SectionHeadline title={'Proof of Work'}>
@@ -37,18 +25,8 @@ const WorkGallery = ({ data }) => {
                     </Link>
                 </div>
                 {/* Right Column / Carousel */}
-                <div className='h-full relative rounded-lg overflow-hidden mx-auto w-full lg:max-w-[66%] lg:my-8'>
-                    <div className='flex no-scrollbar relative overflow-x-scroll' ref={scrollRef}>
-                    {featuredPosts && [featuredPosts[0], featuredPosts[1], featuredPosts[2], featuredPosts[3], featuredPosts[4]].map((post, index) => (
-                        <div key={index}>
-                            <FeaturedImage post={post} />
-                        </div>
-                    ))}
-                    </div> 
-                    <div className='flex justify-between px-6 absolute w-full bottom-[5%]'>
-                        <CgChevronDoubleLeftR className='rounded cursor-pointer text-4xl text-[#d7e1f3]' onClick={() => scroll('left')}/>
-                        <CgChevronDoubleRightR className='rounded cursor-pointer text-4xl text-[#d7e1f3]' onClick={() => scroll('right')}/>
-                    </div> 
+                <div className='h-full relative rounded-lg overflow-hidden mx-auto w-full lg:max-w-[66%] my-4'>
+                    <ImageCarousel posts={featuredPosts} />
                 </div>
             </div>
         </SectionHeadline>

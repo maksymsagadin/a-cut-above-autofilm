@@ -7,8 +7,8 @@ import { FaInstagram } from 'react-icons/fa'
 
 const Footer = ({ contact }) => {
   const router = useRouter()
-
   const { companyName, phone, address, instagram, affiliateLinks, logo } = contact
+
   return (
     <footer className='grid grid-cols-2 md:grid-cols-4 gap-2 m-2 my-4 md:m-8'>
       {/* Affiliate Links */}
@@ -46,22 +46,25 @@ const Footer = ({ contact }) => {
       <nav className='mx-auto order-2 md:order-3 md:col-span-1'>
         <span className='font-bold border-yellow-400 text-lg border-b-[2px]'>Quick Nav Links</span>
         <ul>
+          {/* If Home Page */}
           {router.pathname === '/' && 
           <>
-            <li> <LinkScroll className='cursor-pointer' to='services' offset={-15} smooth='true'>Services</LinkScroll> </li>
-            <li> <LinkScroll className='cursor-pointer' to='findus' offset={-15} smooth='true'>Find Us</LinkScroll> </li>
-            <li> <LinkScroll className='cursor-pointer' to='about' offset={-15} smooth='true'>About</LinkScroll> </li>
+            <li className='cursor-pointer'> <LinkScroll to='services' offset={-15} smooth='true'>Services</LinkScroll> </li>
+            <li className='cursor-pointer'> <LinkScroll to='findus' offset={-15} smooth='true'>Find Us</LinkScroll> </li>
+            <li className='cursor-pointer'> <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll> </li>
           </>}
+          {/* If Not Home Page */}
           {router.pathname !== '/' && 
             <>
-              <li> <Link className='cursor-pointer' href='/#services' passHref>Services</Link> </li>
-              <li> <Link className='cursor-pointer' href='/#findus' passHref>Find Us</Link> </li>
-              <li> <Link className='cursor-pointer' href='/#about' passHref>About</Link> </li>
-              <li> <Link className='cursor-pointer' href='/' passHref>Home</Link> </li>
+              <li className='cursor-pointer'> <Link href='/#services' passHref>Services</Link> </li>
+              <li className='cursor-pointer'> <Link href='/#findus' passHref>Find Us</Link> </li>
+              <li className='cursor-pointer'> <Link href='/#about' passHref>About</Link> </li>
+              <li className='cursor-pointer'> <Link href='/' passHref>Home</Link> </li>
             </>
           }
+          {/* If Blog Page */}
           {router.pathname !== '/blog' && 
-            <li> <Link className='cursor-pointer' href='/blog' passHref>Blog</Link> </li>}
+            <li className='cursor-pointer'> <Link href='/blog' passHref>Blog</Link> </li>}
         </ul>
       </nav>
     </footer>

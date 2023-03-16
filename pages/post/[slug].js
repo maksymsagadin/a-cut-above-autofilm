@@ -10,7 +10,7 @@ const PostDetails = ({ post, contact }) => {
         return <Loader />
     }
     return (
-        <div className='mx-auto mt-28 px-4 sm:px-8 mb-8'>
+        <div className='mt-[6.5rem] px-4 sm:px-8'>
             <Header logoURL={contact.logo.url} />
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
                 <div className='col-span-1 lg:col-span-9'>
