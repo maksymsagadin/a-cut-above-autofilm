@@ -1,6 +1,13 @@
 # A Cut Above Autofilm
 
-### [Live Site](https://a-cut-above-autofilm.vercel.app/)
+### [Live Site](https://www.acutaboveaf.com/)
+Home Page
+
+<img width="500" alt="ACA-homepage" src="https://user-images.githubusercontent.com/51523851/225769561-1b76218e-4d8e-4a4d-a6d2-e31fc0aa6dc1.png">
+
+Blog Page
+
+<img width="500" alt="ACA-screenshot" src="https://user-images.githubusercontent.com/51523851/225769325-76db60a3-6134-4868-bc4c-e63be6d09a73.png">
 
 ## Introduction
 This project involved the independent development of a modern blog website and business landing page using Next.JS, GraphCMS API, and TailwindCSS. Through the implementation of a mobile-first, responsive design, user engagement was improved with a 60% increase in average time spent on site. The project also streamlined content management and achieved a seamless integration of the blog website and business landing page. The project was completed on time and to a high standard, resulting in increased website traffic and improved mobile user experience.
