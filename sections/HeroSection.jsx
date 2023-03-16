@@ -5,8 +5,6 @@ import bgMobileBlur from '../public/gt3-mobile-blur.jpg'
 import bgDesktopBlur from '../public/gt3-desktop-blur.jpg'
 import { ContactTabs } from '../components'
 
-
-
 const HeroSection = ({ data }) => {
   const { heading, subheading, greeting, contact, bgMobile, bgDesktop } = data
   const [width, setWidth] = useState(0)
@@ -20,7 +18,7 @@ const HeroSection = ({ data }) => {
   
   return (
     <div className='w-full h-screen'>
-      <div className='w-full h-screen overflow-hidden absolute -z-10'>
+      <div className='w-full h-screen absolute -z-10'>
         <Image 
         className='brightness-75 md:filter-none'
         src={width < 768 ? bgMobile : bgDesktop} 
