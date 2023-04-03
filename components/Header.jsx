@@ -52,18 +52,18 @@ const Header = ({ logoURL }) => {
                             <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll>
                          </li>
                     </>}
-                    {/* IF Not Home */}
+                    {/* If Not Home */}
                     {router.pathname !== '/' && 
                     <>
                         <li className={classNames.listItem}>
-                            <Link href='/#about' passHref>About</Link>
-                         </li>
+                            <Link href='/#services' passHref>Services</Link>
+                        </li>
                         <li className={classNames.listItem}>
                             <Link href='/#findus' passHref>Find Us</Link>
                         </li>
                         <li className={classNames.listItem}>
-                            <Link href='/#services' passHref>Services</Link>
-                        </li>
+                            <Link href='/#about' passHref>About</Link>
+                         </li>
                         <li className={classNames.listItem}>
                             <Link href='/' passHref>Home</Link>
                         </li>
