@@ -8,7 +8,6 @@ import MobileMenu from './MobileMenu'
 
 const classNames = {
     navContainer: 'absolute top-0 left-0 flex items-center justify-between w-full py-2 px-4 md:px-6 md:bg-black/25 lg:px-8',
-    closeButton: 'absolute top-8 right-3 cursor-pointer text-4xl',
     listItem: 'text-lg p-1 md:text-2xl md:p-4 transition duration-500 transform lg:hover:translate-y-2  lg:hover:text-blue-300',
 }
 
@@ -21,10 +20,10 @@ const Header = ({ logoURL }) => {
     }
 
     return (
-        <nav className='container top-0'>
+        <nav className='container'>
             <div className={classNames.navContainer}>
                 {/* Left Section */}
-                <nav>
+                <nav aria-label='Logo navigation. Navigate to top of Home page.'>
                     <Link href='/' passHref>
                         <span className='cursor-pointer duration-500 ease-linear hover:translate-x-4'>
                             <Image src={logoURL} alt='A Cut Above Logo' height={64} width={64} priority />
@@ -38,7 +37,7 @@ const Header = ({ logoURL }) => {
                 {/* Mobile Menu */}
                 <MobileMenu showMenu={showMenu} toggleMenu={toggleMenu} />
                 {/* Desktop Navbar */}
-                <ul className='hidden md:flex text-shadow text-gray-200 font-bold cursor-pointer'>
+                <ul aria-label='Main navigation' className='hidden md:flex text-shadow text-gray-200 font-bold cursor-pointer'>
                     {/* If Home Page */}
                     {router.pathname === '/' && 
                     <>
@@ -50,7 +49,7 @@ const Header = ({ logoURL }) => {
                         </li>
                         <li className={classNames.listItem}>
                             <LinkScroll to='about' offset={-15} smooth='true'>About</LinkScroll>
-                         </li>
+                        </li>
                     </>}
                     {/* If Not Home */}
                     {router.pathname !== '/' && 
@@ -63,7 +62,7 @@ const Header = ({ logoURL }) => {
                         </li>
                         <li className={classNames.listItem}>
                             <Link href='/#about' passHref>About</Link>
-                         </li>
+                        </li>
                         <li className={classNames.listItem}>
                             <Link href='/' passHref>Home</Link>
                         </li>
@@ -75,6 +74,7 @@ const Header = ({ logoURL }) => {
                         </li>
                     }
                 </ul>
+                
             </div>
         </nav>
     )
