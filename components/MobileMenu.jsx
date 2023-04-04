@@ -4,9 +4,9 @@ import {Link as LinkScroll} from 'react-scroll'
 import { CgCloseR } from 'react-icons/cg'
 
 const classNames = {
-    menuContainer: 'flex-col flex items-center absolute top-0 right-0 left-1/3 sm:left-1/2 bg-black/25 backdrop-blur rounded-bl-lg gap-8 pt-24 p-8 z-50 md:hidden',
+    menuContainer: 'flex-col flex items-center absolute top-0 right-0 left-1/3 sm:left-1/2 bg-black/30 backdrop-blur-sm rounded-bl-lg gap-8 pt-24 p-8 z-50 md:hidden',
     closeButton: 'absolute top-6 right-3 cursor-pointer text-4xl',
-    listItem: 'text-lg p-1 sm:text-xl sm:p-2 transition duration-500 transform active:text-yellow-400 active:translate-y-2',
+    listItem: 'text-lg p-1 cursor-pointer sm:text-xl sm:p-2 transition duration-300 transform active:text-yellow-400 active:translate-y-2',
 }
 
 const MobileMenu = ({ showMenu, toggleMenu }) => {
