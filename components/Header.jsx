@@ -7,20 +7,21 @@ import { CgMenuRight } from 'react-icons/cg'
 import MobileMenu from './MobileMenu'
 
 const classNames = {
-    navContainer: 'absolute top-0 left-0 flex items-center justify-between w-full py-2 px-4 md:px-6 md:bg-black/25 lg:px-8',
+    navContainer: 'absolute top-0 left-0 flex items-center justify-between w-full py-2 px-4 md:px-6 md:bg-black/25 lg:px-8 ',
     listItem: 'text-lg p-1 md:text-2xl md:p-4 transition duration-500 transform lg:hover:translate-y-2  lg:hover:text-blue-300',
 }
 
 const Header = ({ logoURL }) => {
     const [showMenu, setShowMenu] = useState(false)
     const router = useRouter()
+    const isHomePage = router.pathname === '/'
 
     const toggleMenu = () => {
         setShowMenu((prevShowMenu) => !prevShowMenu)
     }
 
     return (
-        <nav className='container'>
+        <header className={`sticky top-0 z-50 ${isHomePage ? '' : 'pt-[6.5rem]'}`}>
             <div className={classNames.navContainer}>
                 {/* Left Section */}
                 <nav aria-label='Logo navigation. Navigate to top of Home page.'>
@@ -76,7 +77,7 @@ const Header = ({ logoURL }) => {
                 </ul>
                 
             </div>
-        </nav>
+        </header>
     )
 }
 
