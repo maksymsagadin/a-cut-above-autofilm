@@ -10,7 +10,7 @@ const PostDetails = ({ post, contact }) => {
         return <Loader />
     }
     return (
-        <div className='mt-[6.5rem] px-4 sm:px-8'>
+        <div className='px-4 sm:px-8'>
             <Header logoURL={contact.logo.url} />
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
                 <div className='col-span-1 lg:col-span-9'>
@@ -20,7 +20,7 @@ const PostDetails = ({ post, contact }) => {
                     <Comments slug={post.slug} />
                 </div>
                 <div className='col-span-1 lg:col-span-3'>
-                    <div className='relative lg:sticky lg:top-8'>
+                    <div className='relative lg:sticky lg:top-24'>
                         <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
                     </div>
                 </div>
