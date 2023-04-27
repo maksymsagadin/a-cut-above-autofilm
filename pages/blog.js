@@ -48,10 +48,9 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
   }, [categories])
 
   return (
-    <div className="mt-[6.5rem]">
-      <Header logoURL={contact.logo.url} />
+    <>
+      <Header logoURL={contact.logo.url}/>
       <ImageCarousel posts={featuredPosts} />
-      {/* <FeaturedPosts posts={featuredPosts} /> */}
       <SectionHeadline title='Blog'>
         {/* <Categories /> */}
         <CategoriesFilter categories={categories} onFilterChange={handleFilterChange} />
@@ -64,7 +63,7 @@ export default function Home({ posts, categories, contact, featuredPosts }) {
         </div>
       </SectionHeadline>
       <Footer contact={contact}/>
-    </div>
+    </>
   )
 }
 
